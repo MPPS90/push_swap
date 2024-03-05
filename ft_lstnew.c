@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:22:21 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/03/04 20:53:18 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/03/05 17:28:20 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ typedef struct s_list
     struct s_list *next;
 } t_list; 
 
-t_list *ft_lstnew(int content)
+
+t_list *ft_lstnew(char *content)
 {
     t_list *new_ls;
     
@@ -31,7 +32,28 @@ t_list *ft_lstnew(int content)
     return(new_ls);
 }
 
-int main ()
+
+int main (int argc,char *argv[])
+{
+    t_list *alumno; //una variable del tipo de la estructura
+    char   *nombre;
+    
+    (void)argc;
+    nombre = argv[1];
+    alumno = ft_lstnew(nombre); 
+    printf("%s\n", alumno->content); 
+       
+    return 0;
+} 
+
+//Para poder ver lo que devuelve facilmente
+/* typedef struct s_list
+{
+    int content; // se pone aquí int porque con el void* que indica en el subject no se podría ver el valor devuelto
+    struct s_list *next;
+} t_list;  */
+
+/* int main ()
 {
     t_list *alumno;
     
@@ -39,15 +61,9 @@ int main ()
     alumno = ft_lstnew(edad);
     printf("%d", alumno->content);
     return 0;
-}
+} */
 
-//Para poder ver lo que devuelve facilmente
-/* typedef struct s_list
-{
-    int content; // se pone aquí int porque con el void* que indica en el subject no se podría ver el valor devuelto
-    struct s_list *next;
-} t_list;  */ 
-
+ 
 /* 
 Estructura: 
 Tiene los datos
