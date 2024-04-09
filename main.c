@@ -8,7 +8,7 @@
 4. Si en la terminal, despues de compilar, le paso ./a.out hola como estas, debe devoler: Nº argumentos 4, Argumentos: ./a.out, Argumentos: hola, Argumentos: como, Argumentos: estas. 
 */
 
-int main(int argc, char *argv[])
+ int main(int argc, char *argv[])
 {
     int i;
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         printf("Argumentos: %s\n", argv[i]);
         i++;
     }
-}
+} 
 
 /* Seleccionas con shift
 
