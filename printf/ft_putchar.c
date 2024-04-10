@@ -6,11 +6,11 @@
 /*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 21:12:06 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/03/24 17:12:11 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/10 19:36:52 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../push_swap.h"
 
 void	ft_putchar(char c, int *prints)
 {

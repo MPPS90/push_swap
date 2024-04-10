@@ -38,15 +38,7 @@ SRCS = ft_atoi.c\
 	ft_lstadd_front_bonus.c \
 	ft_lstnew_bonus.c \
 	ft_lstsize_bonus.c \
-	printf/ft_printf.c\
-	printf/ft_putchar.c\
-	printf/ft_putnbr.c\
-	printf/ft_putstr.c\
-	printf/ft_print_hexa.c\
-	printf/ft_putstr.c\
-	printf/ft_print_ptr.c\
-	gnl/get_next_line_bonus.c \
-
+	
 OBJS = $(SRCS:.c=.o)
 
 NAME = libft.a 

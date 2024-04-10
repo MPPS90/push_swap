@@ -6,11 +6,11 @@
 /*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:13:02 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/03/24 17:22:36 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/10 19:36:48 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../push_swap.h"
 
 static void	prints(char c, va_list args, int *puntero)
 {

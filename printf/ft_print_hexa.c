@@ -6,11 +6,11 @@
 /*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 15:37:14 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/03/24 17:11:54 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/10 19:35:44 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../push_swap.h"
 
 void	ft_print_hexa(unsigned long n, int check, int *prints)
 {
