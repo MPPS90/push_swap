@@ -2,7 +2,12 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
+typedef struct s_numbers
+{
+    int numb;
+    struct s_numbers *next;
+
+} t_numbers;
 
 #endif
 
-//No se si al final este archivo hay que tenerlo o no, preguntar a Paula me dijo que no había que tener algo y no recuerdo el qué

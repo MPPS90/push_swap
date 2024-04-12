@@ -1,41 +1,41 @@
 NAME = push_swap
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+SOURCE = main.c
 
-CC = gcc 
-CFLAGS = -Wall -Werror -Wextra 
+OBJ = $(SOURCE:.c=.o)
 
-SRCS = main.c\
+LIBFT_DIR = /Users/mpena-so/Desktop/Github/push_swap/libft
+LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS_PRINTF = printf/ft_printf.c\
-	printf/ft_putchar.c\
-	printf/ft_putnbr.c\
-	printf/ft_putstr.c\
-	printf/ft_print_hexa.c\
-	printf/ft_putstr.c\
-	printf/ft_print_ptr.c\
+PRINTF_DIR = /Users/mpena-so/Desktop/Github/push_swap/printf
+PRINTF = $(PRINTF_DIR)/printf.a
 
-#SRCS_GNL = gnl/get_next_line_bonus.c \
+all: $(LIBFT) $(PRINTF) $(NAME)
 
-OBJS = $(SRCS:.c=.o)
- 
-LIBFT_DIRECTORY = ./libft
-LIBFT_LIBRARY = $(LIBFT_DIRECTORY)libft.a
-LIBFT = -L $(LIBFT_DIRECTORY)
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L$(LIBFT_DIR)  -L$(PRINTF_DIR) -lft
 
-all: $(NAME)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJS) $(LIBFT_)
+$(LIBFT):
+	echo "Make libft"
+	make -C $(LIBFT_DIR)
 
-	@$(CC) $(CFLAGS) $(SRCS) $(SRCS_PRINTF) $(LIBFT) -o $(NAME)
-
-	@make -C $(LIBFT_DIRECTORY)
+$(PRINTF):
+	echo "Make printf",
+	make -C $(PRINTF_DIR)
 
 clean:
-	$(RM) $(OBJS)
-	@make clean -C $(LIBFT_DIRECTORY)
+	@rm -f $(OBJ)
+	make -C $(LIBFT_DIR) clean
+	make -C $(PRINTF_DIR) clean
 
 fclean: clean
-	$(RM) $(NAME)
-	@make fclean -C $(LIBFT_DIRECTORY)
+	@rm -f $(NAME)
+	make -C $(LIBFT_DIR) fclean
+	make -C $(PRINTF_DIR) fclean
 
 re: fclean all
 

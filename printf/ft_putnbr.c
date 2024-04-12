@@ -6,11 +6,11 @@
 /*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 19:56:15 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/10 19:36:57 by mpena-so         ###   ########.fr       */
+/*   Updated: 2023/12/14 18:56:43 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "ft_printf.h"
 
 void	ft_putnbr(int n, int *prints)
 {

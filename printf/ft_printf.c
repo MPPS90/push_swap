@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:13:02 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/10 19:36:48 by mpena-so         ###   ########.fr       */
+/*   Updated: 2023/12/15 09:07:01 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "ft_printf.h"
 
 static void	prints(char c, va_list args, int *puntero)
 {
@@ -52,9 +52,4 @@ int	ft_printf(char const *str, ...)
 	}
 	va_end(args);
 	return (numb_prints);
-}
-
-int main()
-{
-    ft_printf("Hola Mundo\n");
 }
