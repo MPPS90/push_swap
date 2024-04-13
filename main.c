@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "push_swap.h"
 
 //main argumentos 
 /* Los argumentos se pasan por la terminal: 
@@ -8,7 +8,7 @@
 4. Si en la terminal, despues de compilar, le paso ./a.out hola como estas, debe devoler: Nº argumentos 4, Argumentos: ./a.out, Argumentos: hola, Argumentos: como, Argumentos: estas. 
 */
 
- int main(int argc, char *argv[])
+ /* int main(int argc, char *argv[])
 {
     int i;
 
@@ -20,7 +20,33 @@
         printf("Argumentos: %s\n", argv[i]);
         i++;
     }
-} 
+}  */
+int main(int argc, char *argv[])
+{
+    int i;
+    int number;
+    t_numbers   *new_nodo;
+
+    i = 1;
+    number = 0;
+
+    while(i < argc)
+    {
+        number = atoi(argv[i]);
+        new_nodo = create_node(number);
+        ft_printf("%d\n", new_nodo->numb);
+        i++;
+    }
+    return (0);
+}
+
+
+
+
+
+
+
+
 
 /* Seleccionas con shift
 

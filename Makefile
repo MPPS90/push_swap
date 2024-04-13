@@ -1,41 +1,32 @@
 NAME = push_swap
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-SOURCE = main.c
+SOURCE = main.c \
+		push_swap.c \
 
 OBJ = $(SOURCE:.c=.o)
 
-LIBFT_DIR = /Users/mpena-so/Desktop/Github/push_swap/libft
-LIBFT = $(LIBFT_DIR)/libft.a
+#LIBFT_DIR = /Users/mpena-so/Desktop/Github/push_swap/libft
+#LIBFT = $(LIBFT_DIR)/libft.a
+LIBFT_DIR = libft
+LIBFT = libft/libft.a
 
-PRINTF_DIR = /Users/mpena-so/Desktop/Github/push_swap/printf
-PRINTF = $(PRINTF_DIR)/printf.a
-
-all: $(LIBFT) $(PRINTF) $(NAME)
+all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L$(LIBFT_DIR)  -L$(PRINTF_DIR) -lft
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L$(LIBFT_DIR) -lft
 
 $(LIBFT):
 	echo "Make libft"
 	make -C $(LIBFT_DIR)
 
-$(PRINTF):
-	echo "Make printf",
-	make -C $(PRINTF_DIR)
-
 clean:
 	@rm -f $(OBJ)
 	make -C $(LIBFT_DIR) clean
-	make -C $(PRINTF_DIR) clean
 
 fclean: clean
 	@rm -f $(NAME)
 	make -C $(LIBFT_DIR) fclean
-	make -C $(PRINTF_DIR) fclean
 
 re: fclean all
 

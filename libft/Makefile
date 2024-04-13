@@ -38,6 +38,12 @@ SRCS = ft_atoi.c\
 	ft_lstadd_front_bonus.c \
 	ft_lstnew_bonus.c \
 	ft_lstsize_bonus.c \
+	printf/ft_print_hexa.c \
+	printf/ft_print_ptr.c \
+	printf/ft_printf.c \
+	printf/ft_putchar.c \
+	printf/ft_putnbr.c \
+	printf/ft_putstr.c \
 	
 OBJS = $(SRCS:.c=.o)
 
