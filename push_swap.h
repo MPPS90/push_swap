@@ -11,6 +11,7 @@ typedef struct s_numbers
 } t_numbers;
 
 t_numbers   *create_node(int numb);
+void        add_nodo(t_numbers **numbs, t_numbers *new);
 
 #endif
 
