@@ -6,18 +6,15 @@ SOURCE = main.c \
 
 OBJ = $(SOURCE:.c=.o)
 
-#LIBFT_DIR = /Users/mpena-so/Desktop/Github/push_swap/libft
-#LIBFT = $(LIBFT_DIR)/libft.a
 LIBFT_DIR = libft
 LIBFT = libft/libft.a
 
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L$(LIBFT_DIR) -lft
+	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L$(LIBFT_DIR) -lft
 
 $(LIBFT):
-	echo "Make libft"
 	make -C $(LIBFT_DIR)
 
 clean:
