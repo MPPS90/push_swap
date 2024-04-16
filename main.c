@@ -33,21 +33,23 @@ int main(int argc, char *argv[])
     i = 1;
     j = 0;
     number = 0;
-
+    lista = NULL;
     while(i < argc)
     {
         number = ft_atoi(argv[i]);
         nodo = create_node(number);
-        ft_printf("%d\n", nodo->numb);
         add_nodo(&lista, nodo);
         i++;
     }
+    swap(&lista);
     //no le puedo poner next porque sino le estaría diciendo que en cuanto este el último ya no pase al siguiente porque lista->next es el penultimo. 
-    while(lista != NULL)
+     while(lista != NULL)
     {
+        ft_printf("%d\n", lista->numb);
         lista = lista->next;
-        ft_printf("%d", lista);''
     }
+    free(nodo);
+    free(lista);
     return (0);
 }
 
