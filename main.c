@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     while(lista != NULL)
     {
         lista = lista->next;
-        ft_printf("%d", lista);
+        ft_printf("%d", lista);''
     }
     return (0);
 }
