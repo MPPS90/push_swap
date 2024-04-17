@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address
 SOURCE = main.c \
 		push_swap.c \
-		sa.c \
+		swap.c \
 
 OBJ = $(SOURCE:.c=.o)
 

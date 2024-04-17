@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:22:21 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/03/05 21:52:51 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:38:12 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list *ft_lstnew(void *content)
     new_ls = malloc(sizeof(t_list));
     if (!new_ls)
         return (NULL);
-    printf("El contenido es %s\n",  content);
+    //printf("El contenido es %s\n",  content);
     new_ls->content = content;
     new_ls->next = NULL;
     return(new_ls);

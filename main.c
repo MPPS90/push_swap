@@ -24,20 +24,19 @@
 int main(int argc, char *argv[])
 {
     int i;
-    int j;
     int number;
     t_numbers   *lista;
     t_numbers   *nodo;
 
-
     i = 1;
-    j = 0;
     number = 0;
     lista = NULL;
     while(i < argc)
     {
         number = ft_atoi(argv[i]);
         nodo = create_node(number);
+        /* if (nodo == NULL)
+            return (-1); */
         add_nodo(&lista, nodo);
         i++;
     }
@@ -45,11 +44,11 @@ int main(int argc, char *argv[])
     //no le puedo poner next porque sino le estaría diciendo que en cuanto este el último ya no pase al siguiente porque lista->next es el penultimo. 
      while(lista != NULL)
     {
-        ft_printf("%d\n", lista->numb);
+        printf("%d\n", lista->numb);
         lista = lista->next;
     }
     free(nodo);
-    free(lista);
+    //free(lista);
     return (0);
 }
 
