@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:47:49 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/16 20:55:31 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/19 20:33:33 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
+# include <stdbool.h>
 
 typedef struct s_numbers
 {
@@ -24,7 +25,10 @@ typedef struct s_numbers
 
 t_numbers   *create_node(int numb);
 void        add_nodo(t_numbers **numbs, t_numbers *new);
-void swap(t_numbers **numbs);
+void swap(t_numbers **numbs, bool check);
+void print_content(t_numbers *numbs);
+int lst_size(t_numbers *numbs);
+void push(t_numbers **stack_a, t_numbers **stack_b);
 
 #endif
 

@@ -26,11 +26,13 @@ int main(int argc, char *argv[])
     int i;
     int number;
     t_numbers   *lista;
+    t_numbers   *lista2;
     t_numbers   *nodo;
 
     i = 1;
     number = 0;
     lista = NULL;
+    lista2 = NULL;
     while(i < argc)
     {
         number = ft_atoi(argv[i]);
@@ -40,15 +42,18 @@ int main(int argc, char *argv[])
         add_nodo(&lista, nodo);
         i++;
     }
-    swap(&lista);
+    // print_content(lista);
+    // swap(&lista, 0);
     //no le puedo poner next porque sino le estaría diciendo que en cuanto este el último ya no pase al siguiente porque lista->next es el penultimo. 
-     while(lista != NULL)
-    {
-        printf("%d\n", lista->numb);
-        lista = lista->next;
-    }
+    printf("Antes del push\n");
+    print_content(lista);
+    push(&lista2, &lista);
+    printf("Despues del push\n");
+    print_content(lista);
+    printf("Lista 2\n");
+    print_content(lista2);
     free(nodo);
-    //free(lista);
+    free(lista);
     return (0);
 }
 

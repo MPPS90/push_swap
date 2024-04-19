@@ -1,9 +1,12 @@
 NAME = push_swap
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra #-g3 -fsanitize=address
 SOURCE = main.c \
 		push_swap.c \
 		swap.c \
+		print_content.c \
+		lst_size.c \
+		push.c \
 
 OBJ = $(SOURCE:.c=.o)
 

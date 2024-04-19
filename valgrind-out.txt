@@ -1,0 +1,133 @@
+==21670== Memcheck, a memory error detector
+==21670== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21670== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==21670== Command: ./push_swap
+==21670== Parent PID: 20571
+==21670== 
+--21670-- 
+--21670-- Valgrind options:
+--21670--    --leak-check=full
+--21670--    --show-leak-kinds=all
+--21670--    --track-origins=yes
+--21670--    --verbose
+--21670--    --log-file=valgrind-out.txt
+--21670-- Contents of /proc/version:
+--21670--   Linux version 5.15.146.1-microsoft-standard-WSL2 (root@65c757a075e2) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP Thu Jan 11 04:09:03 UTC 2024
+--21670-- 
+--21670-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--21670-- Page sizes: currently 4096, max supported 4096
+--21670-- Valgrind library directory: /usr/libexec/valgrind
+--21670-- Reading syms from /home/pilar/projects42/push_swap/push_swap
+--21670-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--21670--   Considering /usr/lib/debug/.build-id/cc/cdd41e22e25f77a8cda3d045c57ffdb01a9793.debug ..
+--21670--   .. build-id is valid
+--21670-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--21670--    object doesn't have a symbol table
+--21670--    object doesn't have a dynamic symbol table
+--21670-- Scheduler: using generic scheduler lock implementation.
+--21670-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==21670== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-21670-by-pilar-on-???
+==21670== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-21670-by-pilar-on-???
+==21670== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-21670-by-pilar-on-???
+==21670== 
+==21670== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==21670== don't want to do, unless you know exactly what you're doing,
+==21670== or are doing some strange experiment):
+==21670==   /usr/bin/vgdb --pid=21670 ...command...
+==21670== 
+==21670== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==21670==   /path/to/gdb ./push_swap
+==21670== and then give GDB the following command
+==21670==   target remote | /usr/bin/vgdb --pid=21670
+==21670== --pid is optional if only one valgrind process is running
+==21670== 
+--21670-- REDIR: 0x402aa40 (ld-linux-x86-64.so.2:strlen) redirected to 0x580bcec2 (???)
+--21670-- REDIR: 0x402a810 (ld-linux-x86-64.so.2:index) redirected to 0x580bcedc (???)
+--21670-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--21670--    object doesn't have a symbol table
+--21670-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+--21670--    object doesn't have a symbol table
+==21670== WARNING: new redirection conflicts with existing -- ignoring it
+--21670--     old: 0x0402aa40 (strlen              ) R-> (0000.0) 0x580bcec2 ???
+--21670--     new: 0x0402aa40 (strlen              ) R-> (2007.0) 0x0484ee30 strlen
+--21670-- REDIR: 0x4027220 (ld-linux-x86-64.so.2:strcmp) redirected to 0x484fcd0 (strcmp)
+--21670-- REDIR: 0x402afa0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4853840 (mempcpy)
+--21670-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--21670--   Considering /usr/lib/debug/.build-id/20/3de0ae33b53fee1578b117cb4123e85d0534f0.debug ..
+--21670--   .. build-id is valid
+==21670== WARNING: new redirection conflicts with existing -- ignoring it
+--21670--     old: 0x04907c60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--21670--     new: 0x04907c60 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==21670== WARNING: new redirection conflicts with existing -- ignoring it
+--21670--     old: 0x04907c60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--21670--     new: 0x04907c60 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+==21670== WARNING: new redirection conflicts with existing -- ignoring it
+--21670--     old: 0x04907c60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--21670--     new: 0x04907c60 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==21670== WARNING: new redirection conflicts with existing -- ignoring it
+--21670--     old: 0x04907c60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--21670--     new: 0x04907c60 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+--21670-- REDIR: 0x490a720 (libc.so.6:strnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a9e0 (libc.so.6:strpbrk) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a2e0 (libc.so.6:strcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x4928cd0 (libc.so.6:wcsnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490b6d0 (libc.so.6:memset) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x4927540 (libc.so.6:wcslen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490bc10 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x4927370 (libc.so.6:wcschr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a260 (libc.so.6:index) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a960 (libc.so.6:rindex) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490b5a0 (libc.so.6:memmove) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+==21670== Preferring higher priority redirection:
+--21670--     old: 0x04a025c0 (__memcpy_avx_unalign) R-> (2018.0) 0x04850f90 __memcpy_avx_unaligned_erms
+--21670--     new: 0x04a025c0 (__memcpy_avx_unalign) R-> (2018.1) 0x04852880 memmove
+--21670-- REDIR: 0x49273f0 (libc.so.6:wcscmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490b9e0 (libc.so.6:stpncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x49279b0 (libc.so.6:wmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a830 (libc.so.6:strncmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490ba70 (libc.so.6:strcasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a420 (libc.so.6:strcspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x4927470 (libc.so.6:wcscpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a1d0 (libc.so.6:strcat) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490bb60 (libc.so.6:strncasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490b480 (libc.so.6:bcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x4913570 (libc.so.6:memrchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490d010 (libc.so.6:strchrnul) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a390 (libc.so.6:strcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490bb10 (libc.so.6:strcasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a6a0 (libc.so.6:strlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490a8d0 (libc.so.6:strncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490b950 (libc.so.6:stpcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490b3f0 (libc.so.6:memchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490ab00 (libc.so.6:strspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490b7d0 (libc.so.6:mempcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490bac0 (libc.so.6:strncasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x490cf80 (libc.so.6:rawmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--21670-- REDIR: 0x49ff410 (libc.so.6:__strrchr_avx2) redirected to 0x484e810 (rindex)
+--21670-- REDIR: 0x49ff5e0 (libc.so.6:__strlen_avx2) redirected to 0x484ed10 (strlen)
+--21670-- REDIR: 0x49070a0 (libc.so.6:malloc) redirected to 0x4848820 (malloc)
+--21670-- REDIR: 0x4a02580 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4853440 (mempcpy)
+--21670-- REDIR: 0x49073e0 (libc.so.6:free) redirected to 0x484b210 (free)
+==21670== Conditional jump or move depends on uninitialised value(s)
+==21670==    at 0x484B235: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==21670==    by 0x1092C9: main (in /home/pilar/projects42/push_swap/push_swap)
+==21670==  Uninitialised value was created by a stack allocation
+==21670==    at 0x1091C9: main (in /home/pilar/projects42/push_swap/push_swap)
+==21670== 
+==21670== 
+==21670== HEAP SUMMARY:
+==21670==     in use at exit: 0 bytes in 0 blocks
+==21670==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==21670== 
+==21670== All heap blocks were freed -- no leaks are possible
+==21670== 
+==21670== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==21670== 
+==21670== 1 errors in context 1 of 1:
+==21670== Conditional jump or move depends on uninitialised value(s)
+==21670==    at 0x484B235: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==21670==    by 0x1092C9: main (in /home/pilar/projects42/push_swap/push_swap)
+==21670==  Uninitialised value was created by a stack allocation
+==21670==    at 0x1091C9: main (in /home/pilar/projects42/push_swap/push_swap)
+==21670== 
+==21670== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
