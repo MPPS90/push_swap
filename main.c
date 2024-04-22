@@ -47,11 +47,25 @@ int main(int argc, char *argv[])
     //no le puedo poner next porque sino le estaría diciendo que en cuanto este el último ya no pase al siguiente porque lista->next es el penultimo. 
     printf("Antes del push\n");
     print_content(lista);
-    push(&lista2, &lista);
+    /*printf("push_a:\n\n");
+    push_pa(&lista2, &lista);
     printf("Despues del push\n");
+    printf("Lista \n");
+    print_content(lista);
+    printf("Lista 2\n");
+    print_content(lista2); */
+    printf("push_b:\n\n");
+    push_pb(&lista2, &lista);
+    printf("Despues del push\n");
+    printf("Lista \n");
     print_content(lista);
     printf("Lista 2\n");
     print_content(lista2);
+    printf("ROTATE\n");
+    rotate(&lista);
+    printf("rotate\n");
+    printf("Lista \n");
+    print_content(lista);
     free(nodo);
     free(lista);
     return (0);

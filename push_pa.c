@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   push_pa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:20:23 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/19 20:34:01 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:49:26 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void push(t_numbers **stack_a, t_numbers **stack_b)
+void push_pa(t_numbers **stack_a, t_numbers **stack_b)
 {
     t_numbers   *first_node_b;
     t_numbers   *second_node_b;
@@ -29,5 +29,4 @@ void push(t_numbers **stack_a, t_numbers **stack_b)
     first_node_a = *stack_a;
     first_node_b->next = first_node_a;
     *stack_a = first_node_b; 
-    
 }

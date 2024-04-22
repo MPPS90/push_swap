@@ -6,7 +6,9 @@ SOURCE = main.c \
 		swap.c \
 		print_content.c \
 		lst_size.c \
-		push.c \
+		push_pa.c \
+		push_pb.c \
+		rotate.c \
 
 OBJ = $(SOURCE:.c=.o)
 
