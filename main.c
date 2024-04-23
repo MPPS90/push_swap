@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     // print_content(lista);
     // swap(&lista, 0);
     //no le puedo poner next porque sino le estaría diciendo que en cuanto este el último ya no pase al siguiente porque lista->next es el penultimo. 
-    printf("Antes del push\n");
+    ft_printf("Antes del push\n");
     print_content(lista);
     /*printf("push_a:\n\n");
     push_pa(&lista2, &lista);
@@ -54,17 +54,17 @@ int main(int argc, char *argv[])
     print_content(lista);
     printf("Lista 2\n");
     print_content(lista2); */
-    printf("push_b:\n\n");
+    ft_printf("push_b:\n\n");
     push_pb(&lista2, &lista);
-    printf("Despues del push\n");
-    printf("Lista \n");
+    ft_printf("Despues del push\n");
+    ft_printf("Lista \n");
     print_content(lista);
-    printf("Lista 2\n");
+    ft_printf("Lista 2\n");
     print_content(lista2);
-    printf("ROTATE\n");
+    ft_printf("ROTATE\n");
     rotate(&lista);
-    printf("rotate\n");
-    printf("Lista \n");
+    ft_printf("rotate\n");
+    ft_printf("Lista \n");
     print_content(lista);
     free(nodo);
     free(lista);
