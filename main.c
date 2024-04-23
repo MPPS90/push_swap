@@ -45,7 +45,6 @@ int main(int argc, char *argv[])
     // print_content(lista);
     // swap(&lista, 0);
     //no le puedo poner next porque sino le estaría diciendo que en cuanto este el último ya no pase al siguiente porque lista->next es el penultimo. 
-<<<<<<< HEAD
     printf("Antes del push\n");
     print_content(lista);
     /*printf("push_a:\n\n");
@@ -69,13 +68,12 @@ int main(int argc, char *argv[])
     print_content(lista);
     free(nodo);
     free(lista);
-=======
+
     while(lista != NULL)
     {
         lista = lista->next;
         ft_printf("%d", lista);
     }
->>>>>>> parent of f64974f... main y carpeta printrf
     return (0);
 }
 
