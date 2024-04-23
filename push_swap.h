@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:47:49 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/22 23:30:30 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/23 19:53:17 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void    print_content(t_numbers *numbs);
 int lst_size(t_numbers *numbs);
 void    push_pa(t_numbers **stack_a, t_numbers **stack_b);
 void    push_pb(t_numbers **stack_a, t_numbers **stack_b);
-void    rotate(t_numbers **stack_a);
+void    rotate(t_numbers **stack, bool check);
 
 #endif
 

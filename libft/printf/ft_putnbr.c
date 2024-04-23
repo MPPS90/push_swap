@@ -6,11 +6,11 @@
 /*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 19:56:15 by mpena-so          #+#    #+#             */
-/*   Updated: 2023/12/14 18:56:43 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/23 19:04:28 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 void	ft_putnbr(int n, int *prints)
 {

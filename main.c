@@ -26,13 +26,13 @@ int main(int argc, char *argv[])
     int i;
     int number;
     t_numbers   *lista;
-    t_numbers   *lista2;
+    //t_numbers   *lista2;
     t_numbers   *nodo;
 
     i = 1;
     number = 0;
     lista = NULL;
-    lista2 = NULL;
+    //lista2 = NULL;
     while(i < argc)
     {
         number = ft_atoi(argv[i]);
@@ -54,27 +54,19 @@ int main(int argc, char *argv[])
     print_content(lista);
     printf("Lista 2\n");
     print_content(lista2); */
-    ft_printf("push_b:\n\n");
+    /* ft_printf("push_b:\n\n");
     push_pb(&lista2, &lista);
     ft_printf("Despues del push\n");
     ft_printf("Lista \n");
     print_content(lista);
     ft_printf("Lista 2\n");
-    print_content(lista2);
+    print_content(lista2); */
     ft_printf("ROTATE\n");
-    rotate(&lista);
-    ft_printf("rotate\n");
+    rotate(&lista, 0);
     ft_printf("Lista \n");
     print_content(lista);
     free(nodo);
     free(lista);
-
-    while(lista != NULL)
-    {
-        lista = lista->next;
-        ft_printf("%d", lista);
-    }
-    return (0);
 }
 
 
