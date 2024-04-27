@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     ft_printf("Lista 2\n");
     print_content(lista2); */
     ft_printf("ROTATE\n");
-    rotate(&lista, 0);
+    rotate(&lista, 1);
     ft_printf("Lista \n");
     print_content(lista);
     free(nodo);
