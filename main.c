@@ -26,13 +26,13 @@ int main(int argc, char *argv[])
     int i;
     int number;
     t_numbers   *lista;
-    t_numbers   *lista2;
+    //t_numbers   *lista2;
     t_numbers   *nodo;
 
     i = 1;
     number = 0;
     lista = NULL;
-    lista2 = NULL;
+    //lista2 = NULL;
     while(i < argc)
     {
         number = ft_atoi(argv[i]);
@@ -50,8 +50,8 @@ int main(int argc, char *argv[])
     print_content(lista2);
     ft_printf("separador listas\n");
     print_content(lista); */
-    //ft_printf("Antes del push\n");
-    //print_content(lista);
+    ft_printf("Antes del push\n");
+    print_content(lista);
 /*     printf("push_a:\n\n");
     push_pa(&lista2, &lista);
     printf("Despues del push\n");
@@ -70,13 +70,16 @@ int main(int argc, char *argv[])
     rotate(&lista, 1);
     ft_printf("Lista \n");
     print_content(lista); */
-    ft_printf("ROTATE rr\n");
+    /* ft_printf("ROTATE rr\n");
     rotate_rr(&lista, &lista2);
     print_content(lista);
     ft_printf("separador listas\n");
-    print_content(lista2);
-    free(nodo);
-    free(lista);
+    print_content(lista2); */
+    ft_printf("REVERSE ROTATE\n");
+    reverse_rotate(&lista);
+    //print_content(lista);
+    //free(nodo);
+    //free(lista);
 }
 
 

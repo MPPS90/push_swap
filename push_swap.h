@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:47:49 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/29 17:27:12 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/29 21:22:50 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,15 @@ typedef struct s_numbers
 
 t_numbers   *create_node(int numb);
 void    add_nodo(t_numbers **numbs, t_numbers *new);
-void    swap(t_numbers **numbs, bool check);
+void    swap(t_numbers **numbs, int check);
 void    swap_ss(t_numbers **stack_a, t_numbers **stack_b);
 void    print_content(t_numbers *numbs);
 int     lst_size(t_numbers *numbs);
 void    push_pa(t_numbers **stack_a, t_numbers **stack_b);
 void    push_pb(t_numbers **stack_a, t_numbers **stack_b);
-void    rotate(t_numbers **stack, bool check);
+void    rotate(t_numbers **stack, int i);
 void    rotate_rr(t_numbers **stack_a, t_numbers **stack_b);
+void    reverse_rotate(t_numbers **stack);
 
 #endif
 

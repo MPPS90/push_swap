@@ -11,6 +11,7 @@ SOURCE = main.c \
 		push_pb.c \
 		rotate.c \
 		rotate_rr.c \
+		reverse_rotate.c \
 
 OBJ = $(SOURCE:.c=.o)
 

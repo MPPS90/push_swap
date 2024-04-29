@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_rr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpena-so <mpena-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:01:47 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/27 17:49:49 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/29 20:22:49 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    rotate_rr(t_numbers **stack_a, t_numbers **stack_b)
 {
-    rotate(stack_a, 0);
-    rotate(stack_b, 1);
+    rotate(stack_a, 2);
+    rotate(stack_b, 2);
     ft_printf("rr\n");
 }
