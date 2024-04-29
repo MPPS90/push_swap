@@ -4,11 +4,13 @@ CFLAGS = -Wall -Werror -Wextra #-g3 -fsanitize=address
 SOURCE = main.c \
 		push_swap.c \
 		swap.c \
+		swap_ss.c \
 		print_content.c \
 		lst_size.c \
 		push_pa.c \
 		push_pb.c \
 		rotate.c \
+		rotate_rr.c \
 
 OBJ = $(SOURCE:.c=.o)
 
