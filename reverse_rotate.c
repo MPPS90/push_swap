@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:41:11 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/29 23:36:24 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/04/30 22:26:23 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void    reverse_rotate(t_numbers **stack)
     //ft_printf("comprobando %d\n", (first_node)->next->numb);
     first_node->next->next = NULL;
     ft_printf("entra aquí\n");
-    //print_content(*stack);
+    print_content(*stack);
     
-    while(node->next != NULL)
+    while(node != NULL)
     {
         ft_printf("en el while %d\n", node->numb);
         node = node->next;

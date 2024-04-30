@@ -77,8 +77,8 @@ int main(int argc, char *argv[])
     print_content(lista2); */
     ft_printf("REVERSE ROTATE\n");
     reverse_rotate(&lista);
-    //print_content(lista);
-    //free(nodo);
+    print_content(lista);
+    free(nodo);
     //free(lista);
 }
 
