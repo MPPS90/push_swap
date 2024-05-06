@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:41:11 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/05 21:42:45 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/06 18:28:59 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,28 +22,32 @@
     first_node = *stack;
     node = *stack;
 
-    while(node->next != NULL) //hasta que el siguiente de ese apunte a NULL, O sea el siguiente del penultimo nodo apunte a NULL.
+    while(node->next->next != NULL) //hasta que el siguiente de ese apunte a NULL, O sea el siguiente del penultimo nodo apunte a NULL.
     {
         node = node->next;
     }
-    ft_printf("comprobando %d\n", node->numb);
-    *stack = node;
+    *stack = node->next;
+    (*stack)->next = first_node;
+    node->next = NULL;
+    //ft_printf("comprobandoooo %d\n", node->numb);
+
+    // node->next = NULL;
     //ft_printf("comprobando %d\n", node->numb);
+    // node->next = first_node;
     //ft_printf("comprobando %d\n", (node)->next->numb); Por qué esto da segfoult? Porque aún no ha llegado a darle valor a esa variable?
     //ft_printf("comprobando %d\n", previous_node->numb);
-    node->next = first_node;
-    //ft_printf("comprobando %d\n", first_node->numb);
+    //ft_printf("comprobando %d\n", node->next->numb);
     //first_node = first_node->next; por qué da igual tener está línea que no tenerla?
     //ft_printf("comprobando %d\n", first_node->numb);
     //ft_printf("comprobando %d\n", (first_node)->next->numb);
-    //first_node->next = previus_node;
-    //ft_printf("comprobando %d\n", first_node->numb);
+    // first_node = first_node->next;
+    //ft_printf("comprobando %d\n", (first_node)->next->numb);
     //ft_printf("comprobando %d\n", (first_node)->next->numb);
     //previous_node->next = NULL;
 }
 
 
-/*  void    reverse_rotate(t_numbers **stack)
+ /* void    reverse_rotate(t_numbers **stack)
 {
     t_numbers   *first_node;
     t_numbers   *node;
