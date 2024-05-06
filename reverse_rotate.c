@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:41:11 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/06 18:28:59 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:25:30 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@
     {
         node = node->next;
     }
+    ft_printf("comprobandoooo %d\n", node->numb);
     *stack = node->next;
     (*stack)->next = first_node;
+    ft_printf("comprobandoooo %d\n", (node)->next->next->numb);
     node->next = NULL;
+    //ft_printf("comprobandoooo %d\n", node->next->numb);
     //ft_printf("comprobandoooo %d\n", node->numb);
 
     // node->next = NULL;
