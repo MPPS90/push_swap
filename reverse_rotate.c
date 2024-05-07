@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:41:11 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/07 12:16:54 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/07 12:38:10 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,15 @@
     }
     //print_content(*stack);
     *stack = node;
-    ft_printf("comprobando %d\n", node->numb);
-    ft_printf("comprobando %d\n", previous_node->numb);
+    //ft_printf("comprobando %d\n", node->numb);
+    //ft_printf("comprobando %d\n", previous_node->numb);
     node->next = first_node;
-    ft_printf("comprobando %d\n", first_node->numb);
+    //ft_printf("comprobando %d\n", first_node->numb);
     //first_node = first_node->next; por qué da igual tener está línea que no tenerla?
-    ft_printf("comprobando %d\n", first_node->numb);
-    ft_printf("comprobando %d\n", (first_node)->next->numb);
-    ft_printf("comprobando %d\n", first_node->numb);
-    ft_printf("comprobando %d\n", (first_node)->next->numb);
+    //ft_printf("comprobando %d\n", first_node->numb);
+    //ft_printf("comprobando %d\n", (first_node)->next->numb);
+    //ft_printf("comprobando %d\n", first_node->numb);
+    //ft_printf("comprobando %d\n", (first_node)->next->numb);
     previous_node->next = NULL;
 } */
 
