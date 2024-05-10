@@ -24,25 +24,6 @@
 }  */
 
 
-//MAIN COMPROBAR QUE LOS ARGUMENTOS SEAN VÁLIDOS
-
-int main(int argc, char *argv[])
-{
-    int numb1;
-
-    while(i < argc)
-    {
-        numb1 = ft_atoi(argv[i]);
-        i++;
-    }
-    result = repeat_digit(numb1, numb2);
-
-    return 0;
-}
-
-
-
-
 //MAIN COMPROBAR LOS MOVIMIENTOS
 /* 
 int main(int argc, char *argv[])

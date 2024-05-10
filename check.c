@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 20:00:30 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/10 16:24:26 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/10 21:07:57 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,9 @@ bool repeat_digit(int argc, char *argv[])
 {
     int i;
     int j;
-    int number1;
-    int number2;
     
     i = 0;
     j = 0;
-    number1 = ft_atoi(argv[i]);
-    number2 = ft_atoi (argv[j]);
     if(argc < 3)
         return false;
     while(argv[i])
@@ -34,7 +30,7 @@ bool repeat_digit(int argc, char *argv[])
         j = i + 1;
         while(argv[j])
         {
-            if(number1 == number2)
+            if(ft_atoi(argv[i]) == ft_atoi(argv[i]))
                 return false;
             j++;
         }
