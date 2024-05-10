@@ -12,6 +12,7 @@ SOURCE = main.c \
 		rotate.c \
 		rotate_rr.c \
 		reverse_rotate.c \
+		check.c \
 
 OBJ = $(SOURCE:.c=.o)
 
