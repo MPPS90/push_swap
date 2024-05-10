@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:47:49 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/09 18:12:49 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/10 23:26:15 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void    rotate(t_numbers **stack, int i);
 void    rotate_rr(t_numbers **stack_a, t_numbers **stack_b);
 void    reverse_rotate(t_numbers **stack);
 bool repeat_digit(int argc, char *argv[]);
+char	*ft_join(char *s1, char *s2);
 
 #endif
 

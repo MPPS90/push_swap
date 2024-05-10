@@ -1,7 +1,7 @@
 NAME = push_swap
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra #-g3 -fsanitize=address
-SOURCE = main.c \
+SOURCE = main2.c \
 		push_swap.c \
 		swap.c \
 		swap_ss.c \
@@ -13,6 +13,8 @@ SOURCE = main.c \
 		rotate_rr.c \
 		reverse_rotate.c \
 		check.c \
+		join.c \
+		
 
 OBJ = $(SOURCE:.c=.o)
 
