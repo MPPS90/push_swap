@@ -34,7 +34,7 @@ bool repeat_digit(int argc, char *argv[])
         j = i + 1;
         while(argv[j])
         {
-            if(number1 == number2);
+            if(number1 == number2)
                 return false;
             j++;
         }

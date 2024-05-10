@@ -8,6 +8,7 @@
 4. Si en la terminal, despues de compilar, le paso ./a.out hola como estas, debe devoler: Nº argumentos 4, Argumentos: ./a.out, Argumentos: hola, Argumentos: como, Argumentos: estas. 
 */
 
+//MAIN COMPROBAR RECIBE LOS ARGUMENTOS
  /* int main(int argc, char *argv[])
 {
     int i;
@@ -21,6 +22,29 @@
         i++;
     }
 }  */
+
+
+//MAIN COMPROBAR QUE LOS ARGUMENTOS SEAN VÁLIDOS
+
+int main(int argc, char *argv[])
+{
+    int numb1;
+
+    while(i < argc)
+    {
+        numb1 = ft_atoi(argv[i]);
+        i++;
+    }
+    result = repeat_digit(numb1, numb2);
+
+    return 0;
+}
+
+
+
+
+//MAIN COMPROBAR LOS MOVIMIENTOS
+/* 
 int main(int argc, char *argv[])
 {
     int i;
@@ -37,8 +61,6 @@ int main(int argc, char *argv[])
     {
         number = ft_atoi(argv[i]);
         nodo = create_node(number);
-        /* if (nodo == NULL)
-            return (-1); */
         add_nodo(&lista, nodo);
         i++;
     }
@@ -50,9 +72,9 @@ int main(int argc, char *argv[])
     print_content(lista2);
     ft_printf("separador listas\n");
     print_content(lista); */
-    ft_printf("Antes del push\n");
+/*     ft_printf("Antes del push\n");
     print_content(lista);
-/*     printf("push_a:\n\n");
+    printf("push_a:\n\n");
     push_pa(&lista2, &lista);
     printf("Despues del push\n");
     printf("Lista \n");
@@ -75,12 +97,12 @@ int main(int argc, char *argv[])
     print_content(lista);
     ft_printf("separador listas\n");
     print_content(lista2); */
-    ft_printf("REVERSE ROTATE\n");
+    /* ft_printf("REVERSE ROTATE\n");
     reverse_rotate(&lista);
     print_content(lista);
-    free(nodo);
+    free(nodo); */
     //free(lista);
-}
+
 
 
 
