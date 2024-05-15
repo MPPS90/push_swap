@@ -21,6 +21,9 @@ char	*ft_join(char *s1, char *s2)
 		i++;
 	}
     s3[i++] = ' ';
+	//esto ess igual que poner arriba s3[i] = ' '; y en la línea de abajo i++;
+	//en este join se agrega esta línea para que separe el nodo al que le va haciendo join de los siguientes
+	//esto es como en el gnl que al leer va guardando en s3 todo lo acumulado. 
 	while (s2[j] != '\0')
 		s3[i++] = s2[j++];
 	s3[i] = '\0';
