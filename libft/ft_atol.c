@@ -6,14 +6,14 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 15:43:45 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/16 15:46:25 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/16 23:25:40 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //preguntar a Juan qué fue lo que dijo Sara aquí de los números positivos
-int	ft_atoi(const char *str)
+int	ft_atol(const char *str)
 {
 	int	i;
 	int	change;

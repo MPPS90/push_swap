@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 20:00:30 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/10 21:07:57 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/16 22:21:48 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 //chekear errores son: argumentos que no son enteros y/o que sean superiores a un número entero (min y max), y/o encontrar números duplicados.
 
 //chekeo números duplicados
+
+
+
 
 bool repeat_digit(int argc, char *argv[])
 {

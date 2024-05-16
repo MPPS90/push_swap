@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:09:39 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/16 15:47:42 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/16 23:24:43 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct s_list
 } t_list;
 
 int		ft_atoi(const char *str);
-int     ft_atoi(const char *str);
+int     ft_atol(const char *str);
 void	ft_bzero(void *dst, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int c);

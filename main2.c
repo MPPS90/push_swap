@@ -55,10 +55,28 @@ int main(int argc, char*argv[])
     } */
     
     //2. comprobar que los argumentos que pasan sean digitos
+/*     while(str[i])
+    {
+        if(str[i] == ' ')
+            i++;
+        
+        numb = ft_isdigit(str[i]);
+        ft_printf("%d\n", numb);
+        if(numb == 0)
+        {
+            free(str);
+            return(1);
+        }
+        //aquí debería ser exit??
+        i++;
+    } */
+
+    //3. comprobar si hay algun signo 
     while(str[i])
     {
         if(str[i] == ' ')
             i++;
+        
         numb = ft_isdigit(str[i]);
         ft_printf("%d\n", numb);
         if(numb == 0)
@@ -70,7 +88,6 @@ int main(int argc, char*argv[])
         i++;
     }
 
-    //3. 
     return 0;
 }
 
