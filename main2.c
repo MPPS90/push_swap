@@ -10,7 +10,7 @@ int main(int argc, char*argv[])
 {
     int i;
     char    *str;
-    char    *aux;
+    //char    *aux;
     int numb;
 
 //1. Primero: Los nodos entren bien, si pasan argumentos en "" asegurarse que queda del mismo tipo que los que no van en "" y que si envían argumentos
@@ -25,7 +25,7 @@ int main(int argc, char*argv[])
     //reservo memoria porque se va a hacer un join para cuidar que lo que nos pasan por argumentos quede con un espacio, entonces,
     //en la primera lectura como no va nada, hay que reservar un espacio para que en el join no de problema al ir la "s1" vacía
     //--ese espacio luego se pude usar con el split como caracter diferenciador
-    while (argv[i])
+    /*while (argv[i])
     {
         aux = str;
         //guardo el varlo de str en aux para que no de leak
@@ -37,7 +37,7 @@ int main(int argc, char*argv[])
         i++;
         //recorremos la cadena argv[i]
     }
-    ft_printf("%s\n", str);
+    ft_printf("%s\n", str); */
     //ft_printf("%d\n", i);
     //al salir del bucle i está en el número de argumentos (sin contar el ejecutable) + 1 porque ha hecho todas las iteraciones
     i = 1;
@@ -72,22 +72,13 @@ int main(int argc, char*argv[])
     } */
 
     //3. comprobar si hay algun signo 
-    while(str[i])
+    while (argv[i])
     {
-        if(str[i] == ' ')
-            i++;
-        
-        numb = ft_isdigit(str[i]);
-        ft_printf("%d\n", numb);
-        if(numb == 0)
-        {
-            free(str);
-            return(1);
-        }
-        //aquí debería ser exit??
+        numb = atol(str);
+        ft_printf("probando ando %d\n", numb);
         i++;
     }
-
+    //ft_printf("probando %d\n", numb);
     return 0;
 }
 
