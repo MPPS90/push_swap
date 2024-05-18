@@ -29,6 +29,7 @@ int main(int argc, char*argv[])
     int i;
     int j;
     char    **sub_s;
+    int numb;
 
     i = 1;
     if(argc <= 2)
@@ -39,11 +40,23 @@ int main(int argc, char*argv[])
         j = 0;
         while(sub_s[j])
         {
-            ft_printf("%s\n", sub_s[j]);
+            //ft_printf("%s\n", sub_s[j]);
             if(check_digit(sub_s[j]) == 1)
+            {
+                free(sub_s[j]);
+                free(sub_s);
                 ft_printf("error\n");
+                return (1);
+                //pendiente ver que es lo que realmente debe imprimir en el ft_print en este caso
+            }
             free(sub_s[j]);
             j++;
+            else
+            {
+                numb = ft_atol(sub_s);
+                if(numb == )
+
+            }
         }
         free(sub_s);
         i++;
