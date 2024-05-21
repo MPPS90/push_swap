@@ -48,3 +48,29 @@ void	add_nodo(t_numbers **numbs, t_numbers *new)
 		aux->next = new;
 	}
 }
+
+void	add_check_nodo(t_numbers **numbs, t_numbers *new)
+{
+	t_numbers	*aux;
+
+	aux = *numbs;
+
+	if (*numbs == NULL)
+	{
+		*numbs = new;
+	}
+	else
+	{
+		while (aux->next != NULL)
+		{
+			if(new->numb == aux->numb)
+			{
+				free(new);
+				ft_printf("Error\n");
+				return(1);
+			}
+			aux = aux->next;
+		}
+		aux->next = new;
+	}
+}

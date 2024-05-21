@@ -36,7 +36,7 @@ int main(int argc, char*argv[])
     int i;
     int j;
     char    **sub_s;
-    int numb;
+    //int numb;
 
     i = 1;
     if(argc <= 2)
@@ -51,29 +51,37 @@ int main(int argc, char*argv[])
         //declaramos otro contador para recorrer la matriz (sub_s) entera, donde están todos los valores de las sub_cadenas resultantes
         while(sub_s[j])
         {
-            //ft_printf("%s\n", sub_s[j]);
+            ft_printf("%s\n", sub_s[j]);
             if(check_digit(sub_s[j]) == 1)
             //llamamos a la función que comprueba digitos para que vaya comparando cada valor de cada sub_cadena y ver si es 1, 1 significa que el valor NO es un digito
             {
                 free(sub_s[j]);
                 free(sub_s);
-                ft_printf("error\n");
+                ft_printf("Error\n");
                 return (1);
                 //en el caso que la comparación del resultado de aplicar a cada valor isdigit para ver si es igual a 1 (no es dígito)
                 //se libera esa sub_cajita y despues la caja entera (split) y se imprime el mensaje de error y se devuelve 1 (error en el main)
                 //pendiente ver que es lo que realmente debe imprimir en el ft_print en este caso
             }
+            if(ft_atol(sub_s[j])> 2147483647 || ft_atol(sub_s[j]) < -2147483648)
+            //verificamos que los número resultantes de aplicar el atol no sobrepasen los límites de un tipo int
+            {
+                free(sub_s[j]);
+                free(sub_s);
+                ft_printf("Error\n");
+            }
             free(sub_s[j]);
             //si recorre todo y no encuentra coincidencia con el resultado de isdigit y 1 (no sea dígito) AQUI FALTA APLICAR TODO LO OTRO
             //Yo creo que ese sub_s[j] y el sub_s deberían ir en el mismo caso. REVISAR  
             j++;
-            else
+            /* else
             {
                 numb = ft_atol(sub_s);
                 if(numb == )
 
-            }
+            } */
         }
+        //ft_printf("comprobando i: %d\n", i);
         free(sub_s);
         i++;
     }

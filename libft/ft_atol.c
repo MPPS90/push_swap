@@ -13,7 +13,7 @@
 #include "libft.h"
 
 //preguntar a Juan qué fue lo que dijo Sara aquí de los números positivos
-int	ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
 	int	i;
 	int	change;
