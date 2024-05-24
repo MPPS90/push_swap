@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 20:00:30 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/16 22:21:48 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/24 09:00:35 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 //chekeo números duplicados
 
-
+//verificación de argumentos no repetidos. Sin terminar.
 
 
 bool repeat_digit(int argc, char *argv[])
