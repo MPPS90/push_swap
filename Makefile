@@ -1,7 +1,8 @@
 NAME = push_swap
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address
-SOURCE = main2.c \
+CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address,leak
+SOURCE = main5.c \
+		juan.c \
 		push_swap.c \
 		swap.c \
 		swap_ss.c \

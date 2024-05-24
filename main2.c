@@ -35,9 +35,13 @@ int main(int argc, char*argv[])
 {
     int i;
     int j;
+    char    *str;
     char    **sub_s;
+    t_numbers  **stack;
+    t_numbers   *new_node;
     //int numb;
 
+    stack = NULL;
     i = 1;
     if(argc <= 2)
         return 1;
@@ -55,7 +59,6 @@ int main(int argc, char*argv[])
             if(check_digit(sub_s[j]) == 1)
             //llamamos a la función que comprueba digitos para que vaya comparando cada valor de cada sub_cadena y ver si es 1, 1 significa que el valor NO es un digito
             {
-                
                 free(sub_s[j]);
                 free(sub_s);
                 ft_printf("Error\n");
@@ -71,7 +74,19 @@ int main(int argc, char*argv[])
                 free(sub_s);
                 ft_printf("Error\n");
             }
-            free(sub_s[j]);
+            //free(sub_s[j]);
+            new_node = create_node(ft_atol(sub_s[j]));
+            ft_printf("contenido new_nodo %d", new_node->numb);
+            if(new_node == NULL)
+            {
+                free(sub_s[j]);
+                free(sub_s);
+                printf("Error\n");
+                exit(1);
+            }
+            ft_printf("pruebaaaaaaaaaaa\n");
+            add_check_nodo(stack, new_node);
+            ft_printf("pruebissss\n");
             //si recorre todo y no encuentra coincidencia con el resultado de isdigit y 1 (no sea dígito) AQUI FALTA APLICAR TODO LO OTRO
             //Yo creo que ese sub_s[j] y el sub_s deberían ir en el mismo caso. REVISAR  
             j++;

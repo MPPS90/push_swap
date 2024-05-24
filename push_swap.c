@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:59:20 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/24 16:31:26 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/24 21:17:44 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,20 @@ int	add_check_nodo(t_numbers **numbs, t_numbers *new)
 {
 	t_numbers	*aux;
 
-	aux = *numbs;
 
+	ft_printf("prueba0");
 	if (*numbs == NULL)
 	{
 		*numbs = new;
+		ft_printf("prueba1");
 	}
 	else
 	{
-		while (aux->next != NULL)
+		ft_printf("prueba");
+		aux = *numbs;
+		while(aux->next != NULL)
 		{
+			ft_printf("prueba");
 			if(new->numb == aux->numb)
 			{
 				free(new);
