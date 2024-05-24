@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:59:20 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/04/17 19:06:43 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/24 16:31:26 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	add_nodo(t_numbers **numbs, t_numbers *new)
 	}
 }
 
-void	add_check_nodo(t_numbers **numbs, t_numbers *new)
+int	add_check_nodo(t_numbers **numbs, t_numbers *new)
 {
 	t_numbers	*aux;
 
@@ -73,4 +73,5 @@ void	add_check_nodo(t_numbers **numbs, t_numbers *new)
 		}
 		aux->next = new;
 	}
+	return (0);
 }

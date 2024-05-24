@@ -55,6 +55,7 @@ int main(int argc, char*argv[])
             if(check_digit(sub_s[j]) == 1)
             //llamamos a la función que comprueba digitos para que vaya comparando cada valor de cada sub_cadena y ver si es 1, 1 significa que el valor NO es un digito
             {
+                
                 free(sub_s[j]);
                 free(sub_s);
                 ft_printf("Error\n");
@@ -74,12 +75,6 @@ int main(int argc, char*argv[])
             //si recorre todo y no encuentra coincidencia con el resultado de isdigit y 1 (no sea dígito) AQUI FALTA APLICAR TODO LO OTRO
             //Yo creo que ese sub_s[j] y el sub_s deberían ir en el mismo caso. REVISAR  
             j++;
-            /* else
-            {
-                numb = ft_atol(sub_s);
-                if(numb == )
-
-            } */
         }
         //ft_printf("comprobando i: %d\n", i);
         free(sub_s);
