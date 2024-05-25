@@ -11,7 +11,7 @@ int main(int argc, char*argv[])
     int i;
     char    *str;
     char    *aux;
-    char    **sub_s;
+    //char    **sub_s;
     //int numb;
 
 //1. Pasar el array que entra por argumentos por un join para que agregue espacio entre cada argumento y acepte todos los valores que entran
@@ -44,14 +44,14 @@ int main(int argc, char*argv[])
     //al salir del bucle i está en el número de argumentos (sin contar el ejecutable) + 1 porque ha hecho todas las iteraciones
     
     //2. Split para poder separar cada argumento (según carácter diferenciador) y de allí valorar cada subcadena (nodo) y ver si son digitos
-    i = 0;
+   /*  i = 0;
     while(str[i])
     {
         sub_s = ft_split(str, ' ');
         ft_printf("%s\n", sub_s[i]);
         i++;
         ft_printf("llega aqui: %d\n", i);
-    }
+    } */
     //ft_printf("llega aqui: %d", i);
     //ft_printf("comprobación: %c", str[i]);
    /*  

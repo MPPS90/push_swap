@@ -1,7 +1,7 @@
 #include "push_swap.h"
 
 //ahora no lo estoy usando ¿quitar?
-char	*ft_join(char *s1, char *s2)
+char	*ft_join(char *s1, char const *s2)
 {
 	char	*s3;
 	int		i;
