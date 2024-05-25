@@ -21,20 +21,14 @@ int  main(int argc, char *argv[])
     if(argc <= 2)
         return 1;
     str = ft_calloc(1, sizeof(char));
-    //reservo memoria para el primer join porque las s1 y s2 no pueden estar vacías y en la primera iteración s1 no tendría nada
     while(argv[i])
     {
         aux = str;
-        //guardo puntero al inicio para que al hacer los nuevos join (nuevos punteros) no pierda el anterior, pueda liberarlo y no genere leaks
         str = ft_join(str, argv[i]);
         free(aux);
         i++;
     }
     ft_printf("%s\n", str);
-    //free(str);
+    free(str);
     return (0);
 }
-
-/*     str = ft_calloc(1, sizeof(char));
-    if(str == NULL)
-        return NULL; */
