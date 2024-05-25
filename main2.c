@@ -24,7 +24,7 @@ int main(int argc, char*argv[])
     int i;
     int j;
     char    **sub_s;
-    t_numbers  **stack;
+    t_numbers  *stack;
     t_numbers   *new_node;
     //int numb;
 
@@ -63,7 +63,7 @@ int main(int argc, char*argv[])
                 exit(1);
             }
             ft_printf("antes de comprobar contenido nodo\n");
-            add_check_nodo(stack, new_node);
+            add_check_nodo(&stack, new_node);
             ft_printf("pruebissss\n");
             j++;
         }

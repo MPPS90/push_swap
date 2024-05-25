@@ -1,5 +1,24 @@
 #include "push_swap.h"
 
+//check_digit evaluará si los carácteres que contiene la string son convertibles a dígitos.
+int check_digit(char *str)
+{   
+    int i;
+
+    i = 0;
+    while(str[i])
+    {
+        if(ft_isdigit(str[i]) == 0)
+            return (1);
+        ft_printf("digits: %c", str[i]);
+        i++;
+    }
+    return (0);
+}
+
+
+
+
 int  main(int argc, char *argv[])
 {
     //1. Hacer join para convertir los argumentos que entran en una sola string, de esta manera al pasarle 
@@ -29,6 +48,15 @@ int  main(int argc, char *argv[])
         i++;
     }
     ft_printf("%s\n", str);
+    if(check_digit(str) == 1);
+    {
+        free(str);
+        exit(1);
+    }
+    else
+    {
+        
+    }
     free(str);
     return (0);
 }

@@ -24,14 +24,14 @@ t_numbers	*create_node(int numb)
 	return (new_nodo);
 }
 
-void	add_nodo(t_numbers **numbs, t_numbers *new)
+void	add_nodo(t_numbers **stack, t_numbers *new)
 {
 	t_numbers	*aux;
 
-	aux = *numbs;
-	if (*numbs == NULL)
+	aux = *stack;
+	if (*stack == NULL)
 	{
-		*numbs = new;
+		*stack = new;
 	}
 	else 
 	{
@@ -44,24 +44,24 @@ void	add_nodo(t_numbers **numbs, t_numbers *new)
 	}
 }
 
-int	add_check_nodo(t_numbers **numbs, t_numbers *new)
+int	add_check_nodo(t_numbers **stack, t_numbers *new)
 {
 	t_numbers	*aux;
 
 
-	ft_printf("prueba0");
-	if (*numbs == NULL)
+	//ft_printf("prueba0\n");
+	if (*stack == NULL)
 	{
-		*numbs = new;
-		ft_printf("prueba1");
+		*stack = new;
+		//ft_printf("prueba1\n");
 	}
 	else
 	{
-		ft_printf("prueba");
-		aux = *numbs;
+		//ft_printf("prueba\n");
+		aux = *stack;
 		while(aux->next != NULL)
 		{
-			ft_printf("prueba");
+			//ft_printf("prueba\n");
 			if(new->numb == aux->numb)
 			{
 				free(new);
