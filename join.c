@@ -10,7 +10,7 @@ char	*ft_join(char *s1, char *s2)
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	add_len = ft_strlen(s1) + 1 + ft_strlen(s2);
-	s3 = (char *)malloc((add_len + 1)* sizeof(char));
+	s3 = (char *)malloc((add_len)* sizeof(char *));
 	if (s3 == NULL)
 		return (NULL);
 	i = 0;

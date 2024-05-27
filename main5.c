@@ -51,12 +51,13 @@ int  main(int argc, char *argv[])
     if(check_digit(str) == 1);
     {
         free(str);
+        ft_printf("Error\n");
         exit(1);
     }
-    else
+/*     else
     {
         
-    }
+    } */
     free(str);
     return (0);
 }
