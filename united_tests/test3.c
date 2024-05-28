@@ -1,5 +1,8 @@
 #include "push_swap.h"
 
+
+//TEST PARA PROBAR LA FUNCIÓN ADD_CHECK_NODE DEL ARCHIVO PUSH_SWAP.C
+
 int main(int argc, char *argv[])
 {
     int i;

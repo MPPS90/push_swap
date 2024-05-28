@@ -1,5 +1,7 @@
 #include "push_swap.h"
 
+//TEST PARA INTENTAR HACER EL PARSEO CON JOIN (RECOMENDACIÓN JUAN SOLUCIÓN DEL ERROR DEL MAIN)
+
 //check_digit evaluará si los carácteres que contiene la string son convertibles a dígitos.
 int check_digit(char *str)
 {   

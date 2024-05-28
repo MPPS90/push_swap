@@ -1,5 +1,7 @@
 #include "push_swap.h"
 
+//TEST HECHO AL INICIO DEL PARSEO
+
 //1. Incluir entre cada nodo un elemento diferenciador para poder aceptar si te pasan argumentos con "" o sin eso y luego poder separalos para poder evaluarlos
 //2. Split para poder separar la cadena en substrings y con eso valorar si son dígitos con el isdigit
 //3. Si son dígitos, los pasaría a número con el atol para evaluar que no sea ni el más grande del max int ni más pequeño del min int
