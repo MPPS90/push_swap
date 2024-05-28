@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:59:20 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/24 21:17:44 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/28 23:54:40 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ int	add_check_nodo(t_numbers **stack, t_numbers *new)
 	{
 		//ft_printf("prueba\n");
 		aux = *stack;
-		while(aux->next != NULL)
+		while(aux != NULL)
 		{
 			//ft_printf("prueba\n");
-			if(new->numb == aux->numb)
+			if(aux->numb == new->numb)
 			{
 				free(new);
 				ft_printf("Error\n");

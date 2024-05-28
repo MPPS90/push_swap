@@ -54,7 +54,7 @@ int main(int argc, char*argv[])
             }
             //free(sub_s[j]);
             new_node = create_node(ft_atol(sub_s[j]));
-            ft_printf("contenido new_nodo %d\n", new_node->numb);
+            //ft_printf("contenido new_nodo %d\n", new_node->numb);
             if(new_node == NULL)
             {
                 free(sub_s[j]);
@@ -62,9 +62,9 @@ int main(int argc, char*argv[])
                 printf("Error\n");
                 exit(1);
             }
-            ft_printf("antes de comprobar contenido nodo\n");
+            //ft_printf("antes de comprobar contenido nodo\n");
             add_check_nodo(&stack, new_node);
-            ft_printf("pruebissss\n");
+            //ft_printf("pruebissss\n");
             j++;
         }
         //ft_printf("comprobando i: %d\n", i);
