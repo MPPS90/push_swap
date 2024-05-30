@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:59:20 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/28 23:54:40 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:17:51 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_numbers	*create_node(int numb)
 void	add_nodo(t_numbers **stack, t_numbers *new)
 {
 	t_numbers	*aux;
+	
 
 	aux = *stack;
 	if (*stack == NULL)
@@ -47,8 +48,9 @@ void	add_nodo(t_numbers **stack, t_numbers *new)
 int	add_check_nodo(t_numbers **stack, t_numbers *new)
 {
 	t_numbers	*aux;
+	t_numbers	*prev;
 
-
+	prev = NULL;
 	//ft_printf("prueba0\n");
 	if (*stack == NULL)
 	{
@@ -68,9 +70,10 @@ int	add_check_nodo(t_numbers **stack, t_numbers *new)
 				ft_printf("Error\n");
 				return(1);
 			}
+			prev = aux;
 			aux = aux->next;
 		}
-		aux->next = new;
+		prev->next = new;
 	}
 	return (0);
 }

@@ -38,7 +38,6 @@ int main(int argc, char*argv[])
         j = 0;
         while(sub_s[j])
         {
-            ft_printf("%s\n", sub_s[j]);
             if(check_digit(sub_s[j]) == 1)
             {
                 free(sub_s[j]);
@@ -63,7 +62,10 @@ int main(int argc, char*argv[])
                 exit(1);
             }
             //ft_printf("antes de comprobar contenido nodo\n");
-            add_check_nodo(&stack, new_node);
+            if(add_check_nodo(&stack, new_node) == 1)
+                exit(1);
+            print_content(stack);
+            printf("------\n");
             //ft_printf("pruebissss\n");
             j++;
         }
@@ -73,3 +75,4 @@ int main(int argc, char*argv[])
     }
     return 0;
 }
+

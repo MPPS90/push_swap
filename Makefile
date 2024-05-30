@@ -15,6 +15,7 @@ SOURCE = main.c \
 		reverse_rotate.c \
 		check.c \
 		join.c \
+		baile.c \
 		
 
 OBJ = $(SOURCE:.c=.o)
