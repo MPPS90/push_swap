@@ -18,7 +18,7 @@ void push_pa(t_numbers **stack_a, t_numbers **stack_b)
     t_numbers   *second_node_b;
     t_numbers   *first_node_a;
     
-    if(lst_size(*stack_b) == 0)
+    if(ft_lst_size(*stack_b) == 0)
         return ;
     
     first_node_b = *stack_b;
@@ -29,4 +29,5 @@ void push_pa(t_numbers **stack_a, t_numbers **stack_b)
     first_node_a = *stack_a;
     first_node_b->next = first_node_a;
     *stack_a = first_node_b; 
+    ft_printf("pa\n");
 }

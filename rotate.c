@@ -17,7 +17,7 @@ void    rotate(t_numbers **stack, int check)
     t_numbers   *first_node;
     t_numbers   *node;
 
-    if (lst_size(*stack) < 2)
+    if (ft_lst_size(*stack) < 2)
         return ; 
         
     first_node = *stack; //first_node guarda el puntero al primer nodo del stack a

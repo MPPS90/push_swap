@@ -18,7 +18,7 @@ void push_pb(t_numbers **stack_a, t_numbers **stack_b)
     t_numbers   *second_node_a;
     t_numbers   *first_node_b;
 
-    if(lst_size(*stack_a) == 0)
+    if(ft_lst_size(*stack_a) == 0)
         return ;
     
     first_node_a = *stack_a; //asignación de valor al primer nodo del stack a
@@ -33,4 +33,5 @@ void push_pb(t_numbers **stack_a, t_numbers **stack_b)
     first_node_a->next = first_node_b; //el puntero que apunta al siguiente nodo del primer nodo del stack a es el primer nodo del stack b
     *stack_b = first_node_a; //asignación de valor al puntero que apunta al inicio del stack b
     //el valor del puntero al que apunta el stack b es el primer nodo del stack a
+    ft_printf("pb\n");
 }

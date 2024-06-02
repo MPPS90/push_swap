@@ -14,26 +14,27 @@
 
 //falta una función para comprobar si está ordenado antes de entrar en esta función.
 
-void check(t_numbers **stack, t_numbers *new)
+void    check_nodes(t_numbers **stack, t_numbers **stack_b)
 {
-    t_numbers   *first_node;
-    t_numbers   *second_node;
+/*     t_numbers   *first_node;
+    t_numbers   *second_node; */
+    int result;
 
-    if(ft_lstsize == 2)
+    ft_printf("HOLAAAA\n");
+    result = ft_lst_size(*stack);
+    ft_printf("%d\n", result);
+    
+    if(result == 2)
     {
         if((*stack)->numb < (*stack)->next->numb)
             swap(stack, 0);
     }
-    if(lst_size == 3)
+    if(result == 3)
     {
-        if((*stack)->numb  (*stack)->next->numb)
-        {
-            
-        }
+        if(((*stack)->numb < (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
+        && ((*stack)->next->next->numb < (*stack)->numb))
+            reverse_rotate(stack);
     }
-    
-    first_node = *stack;
-    second_node = first_node;
-
-    
+/*     first_node = *stack;
+    second_node = first_node; */
 }

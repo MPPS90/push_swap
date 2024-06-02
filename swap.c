@@ -14,7 +14,7 @@
 
 void swap(t_numbers **numbs, int check)
 {
-    if (lst_size(*numbs) < 2)
+    if (ft_lst_size(*numbs) < 2)
         return ; 
     t_numbers   *first_node;
     t_numbers   *second_node;

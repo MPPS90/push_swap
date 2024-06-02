@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int lst_size(t_numbers *numbs)
+int ft_lst_size(t_numbers *numbs)
 {
     int i;
     i = 0;

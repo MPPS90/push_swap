@@ -26,9 +26,12 @@ int main(int argc, char*argv[])
     char    **sub_s;
     t_numbers  *stack;
     t_numbers   *new_node;
+    t_numbers   *stack_b;
     //int numb;
 
     stack = NULL;
+    stack_b = NULL;
+
     i = 1;
     if(argc <= 2)
         return 1;
@@ -64,8 +67,8 @@ int main(int argc, char*argv[])
             //ft_printf("antes de comprobar contenido nodo\n");
             if(add_check_nodo(&stack, new_node) == 1)
                 exit(1);
-            print_content(stack);
-            printf("------\n");
+            //print_content(stack);
+            //printf("------\n");
             //ft_printf("pruebissss\n");
             j++;
         }
@@ -73,6 +76,7 @@ int main(int argc, char*argv[])
         free(sub_s);
         i++;
     }
+    check_nodes(&stack, &stack_b);
     return 0;
 }
 

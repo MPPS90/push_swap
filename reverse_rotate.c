@@ -34,6 +34,7 @@
     //lo de arriba es igual a node->next->next = first_node. Una vez que ya tenenos que la cabeza de la lista es el ultimo le indicamos que su next no es NULL sino que será el que era primero antes.
     ft_printf("comprobandoooo %d\n", (node)->next->next->numb);
     node->next = NULL;
+    ft_printf("rra\n");
 }
 
 //REVERSE CON TRES VARIABLES (TRES AUXILIARES, DOS GUARDARN LA PRIMERA POSICIÓN Y UNA LA ULTIMA)

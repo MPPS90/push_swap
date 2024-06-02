@@ -72,9 +72,9 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-void ft_lstadd_front(t_list **lst, t_list *new);
-t_list *ft_lstnew(void *content);
-int ft_lstsize(t_list *lst);
+//void ft_lstadd_front(t_list **lst, t_list *new);
+//t_list *ft_lstnew(void *content);
+//int ft_lstsize(t_list *lst);
 
 void	ft_putchar(char c, int *prints);
 void	ft_putnbr(int n, int *prints);

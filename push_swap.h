@@ -28,7 +28,7 @@ void    add_nodo(t_numbers **numbs, t_numbers *new);
 void    swap(t_numbers **numbs, int check);
 void    swap_ss(t_numbers **stack_a, t_numbers **stack_b);
 void    print_content(t_numbers *numbs);
-int     lst_size(t_numbers *numbs);
+int     ft_lst_size(t_numbers *numbs);
 void    push_pa(t_numbers **stack_a, t_numbers **stack_b);
 void    push_pb(t_numbers **stack_a, t_numbers **stack_b);
 void    rotate(t_numbers **stack, int i);
@@ -38,6 +38,7 @@ bool repeat_digit(int argc, char *argv[]);
 char	*ft_join(char *s1, char *s2);
 int     add_check_nodo(t_numbers **numbs, t_numbers *new);
 char	*append(char *s1, char const *s2);
+void    check_nodes(t_numbers **stack, t_numbers **stack_b);
 
 #endif
 
