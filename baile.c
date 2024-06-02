@@ -6,11 +6,13 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:35:39 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/30 20:15:29 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/05/31 19:28:55 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+//falta una función para comprobar si está ordenado antes de entrar en esta función.
 
 void check(t_numbers **stack, t_numbers *new)
 {
@@ -25,6 +27,9 @@ void check(t_numbers **stack, t_numbers *new)
     if(lst_size == 3)
     {
         if((*stack)->numb  (*stack)->next->numb)
+        {
+            
+        }
     }
     
     first_node = *stack;
