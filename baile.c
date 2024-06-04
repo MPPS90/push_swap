@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:35:39 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/31 19:28:55 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/06/04 07:56:55 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,33 @@ void    check_nodes(t_numbers **stack, t_numbers **stack_b)
     {
         if((*stack)->numb < (*stack)->next->numb)
             swap(stack, 0);
+            //ojo que aqui he puesto solo para el stack a
     }
     if(result == 3)
     {
         if(((*stack)->numb < (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
         && ((*stack)->next->next->numb < (*stack)->numb))
             reverse_rotate(stack);
+        if(((*stack)->numb > (*stack)->next->numb) && ((*stack)->next->numb < (*stack)->next->next->numb) 
+        && ((*stack)->next->next->numb < (*stack)->numb))
+            rotate(stack, 0);
+            //ojo que aquí he puesto solo para el stack a
+        if(((*stack)->numb > (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
+        && ((*stack)->next->next->numb < (*stack)->numb))
+        {
+            swap(stack, 0);
+            rotate(stack, 0);
+            //ojo que aquí he puesto solo para el stack a
+        }
+        if(((*stack)->numb > (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
+        && ((*stack)->next->next->numb > (*stack)->numb))
+            swap(stack, 0);
+            //ojo que aquí he puesto solo para el stack a
+        if(((*stack)->numb < (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
+        && ((*stack)->next->next->numb > (*stack)->numb))
+            swap(stack, 0);
+            rotate(stack, 0);
+            //ojo que aquí he puesto solo para el stack a
     }
 /*     first_node = *stack;
     second_node = first_node; */
