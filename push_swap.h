@@ -39,6 +39,7 @@ char	*ft_join(char *s1, char *s2);
 int     add_check_nodo(t_numbers **numbs, t_numbers *new);
 char	*append(char *s1, char const *s2);
 void    check_nodes(t_numbers **stack, t_numbers **stack_b);
+int     is_ordered(t_numbers *stack);
 
 #endif
 

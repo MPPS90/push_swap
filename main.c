@@ -76,6 +76,12 @@ int main(int argc, char*argv[])
         free(sub_s);
         i++;
     }
+    if(is_ordered(stack) == 0)
+    {
+        ft_printf("entra aquíiiiiii");
+        //free(stack);
+        //exit(1);
+    }
     check_nodes(&stack, &stack_b);
     return 0;
 }

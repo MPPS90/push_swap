@@ -14,6 +14,26 @@
 
 //falta una función para comprobar si está ordenado antes de entrar en esta función.
 
+int is_ordered(t_numbers *stack)
+{
+    t_numbers   *aux;
+
+    aux = stack;
+
+    while(stack != NULL)
+    {
+        if(aux->numb > aux->next->numb)
+        {    
+            ft_printf("la lista ya está ordenaditaaa");
+            return(0);
+        }
+        aux = aux->next;
+        //no sé qué se debe mostrar si ya está ordenada
+    }
+    return(1);
+}
+
+
 void    check_nodes(t_numbers **stack, t_numbers **stack_b)
 {
     int  first_numb;
@@ -68,6 +88,4 @@ void    check_nodes(t_numbers **stack, t_numbers **stack_b)
             print_content(*stack);
         }
     }
-/*     first_node = *stack;
-    second_node = first_node; */
 }
