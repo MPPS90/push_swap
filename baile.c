@@ -16,12 +16,16 @@
 
 void    check_nodes(t_numbers **stack, t_numbers **stack_b)
 {
-/*     t_numbers   *first_node;
-    t_numbers   *second_node; */
+    int  first_numb;
+    int  second_numb;
+    int  third_numb;
     int result;
 
     //ft_printf("HOLAAAA\n");
     result = ft_lst_size(*stack);
+    first_numb = (*stack)->numb;
+    second_numb = (*stack)->next->numb;
+    third_numb = (*stack)->next->next->numb;
     //ft_printf("%d\n", result);
     
     if(result == 2)
@@ -32,43 +36,37 @@ void    check_nodes(t_numbers **stack, t_numbers **stack_b)
     }
     if(result == 3)
     {
-        if(((*stack)->numb < (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
-        && ((*stack)->next->next->numb < (*stack)->numb))
+        if((first_numb < second_numb) && (second_numb > third_numb) && (third_numb< first_numb))
         {
             reverse_rotate(stack);
             print_content(*stack);
         }
-        else if(((*stack)->numb > (*stack)->next->numb) && ((*stack)->next->numb < (*stack)->next->next->numb) 
-        && ((*stack)->next->next->numb < (*stack)->numb))
+        else if((first_numb > second_numb) && (second_numb < third_numb) && (third_numb < first_numb))
         {
             rotate(stack, 0);
             //ojo que aquí he puesto solo para el stack a
             print_content(*stack);
         }    
-        else if(((*stack)->numb > (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
-        && ((*stack)->next->next->numb < (*stack)->numb))
+        else if((first_numb > second_numb) && (second_numb > third_numb) && (third_numb < first_numb))
         {
             swap(stack, 0);
             reverse_rotate(stack);
             //ojo que aquí he puesto solo para el stack a
             print_content(*stack);
         }
-        else if(((*stack)->numb > (*stack)->next->numb) && ((*stack)->next->numb < (*stack)->next->next->numb) 
-        && ((*stack)->next->next->numb > (*stack)->numb))
+        else if((first_numb > second_numb) && (second_numb < third_numb) && (third_numb > first_numb))
         {
             swap(stack, 0);
             //ojo que aquí he puesto solo para el stack a
             print_content(*stack);
         }   
-        else if(((*stack)->numb < (*stack)->next->numb) && ((*stack)->next->numb > (*stack)->next->next->numb) 
-        && ((*stack)->next->next->numb > (*stack)->numb))
+        else if((first_numb < second_numb) && (second_numb > third_numb) && (third_numb > first_numb))
         {
             swap(stack, 0);
             rotate(stack, 0);
             //ojo que aquí he puesto solo para el stack
             print_content(*stack);
         }
-             
     }
 /*     first_node = *stack;
     second_node = first_node; */
