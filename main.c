@@ -61,7 +61,7 @@ int main(int argc, char*argv[])
             {
                 free(sub_s[j]);
                 free(sub_s);
-                printf("Error\n");
+                ft_printf("Error\n");
                 exit(1);
             }
             //ft_printf("antes de comprobar contenido nodo\n");

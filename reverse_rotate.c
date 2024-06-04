@@ -25,14 +25,14 @@
     {
         node = node->next;
     }
-    ft_printf("comprobandoooo %d\n", node->numb);
+    //ft_printf("comprobandoooo %d\n", node->numb);
     *stack = node->next;
     //aquí le indicamos que node->next que es el último (porque node al salir del bucle es el penultimo por la condición puesta en el while) se convierta en la cabeza de la lista
-    ft_printf("comprobandii %d\n", (node)->next->numb);
+    //ft_printf("comprobandii %d\n", (node)->next->numb);
     //ft_printf("comprobandoooo %d\n", (node)->next->next->numb); este printf daría error porque aún no le he asignado el siguiente de node->next y hasta ese momento es NULL porque es el final de la lista 
     (*stack)->next = first_node;
     //lo de arriba es igual a node->next->next = first_node. Una vez que ya tenenos que la cabeza de la lista es el ultimo le indicamos que su next no es NULL sino que será el que era primero antes.
-    ft_printf("comprobandoooo %d\n", (node)->next->next->numb);
+    //ft_printf("comprobandoooo %d\n", (node)->next->next->numb);
     node->next = NULL;
     ft_printf("rra\n");
 }
