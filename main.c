@@ -27,11 +27,11 @@ int main(int argc, char*argv[])
     t_numbers  *stack;
     t_numbers   *new_node;
     t_numbers   *stack_b;
-    //int numb;
+    int result;
 
     stack = NULL;
     stack_b = NULL;
-
+ 
     i = 1;
     if(argc <= 2)
         return 1;
@@ -70,19 +70,32 @@ int main(int argc, char*argv[])
             //print_content(stack);
             //printf("------\n");
             //ft_printf("pruebissss\n");
+            free(sub_s[j]);
             j++;
         }
         //ft_printf("comprobando i: %d\n", i);
         free(sub_s);
         i++;
     }
-    if(is_ordered(stack) == 0)
+    result = ft_lst_size(stack);
+    if(is_ordered(stack) == 1)
     {
-        ft_printf("entra aquíiiiiii");
-        //free(stack);
-        //exit(1);
+        ft_printf("esta ordenadoooooo\n");
+        exit(1);
     }
-    check_nodes(&stack, &stack_b);
+    //result = ft_lst_size(stack);
+/*     ft_printf("%d\n", result);
+    print_content(stack); */
+    else if(result == 3)
+    {
+        ft_printf("entrasss aqui\n");
+        check_3_nodes(&stack, &stack_b);
+    }
+    else if(result == 4)
+    {
+        check_5_nodes(&stack, &stack_b);
+        print_content(stack);
+    }
     return 0;
 }
 

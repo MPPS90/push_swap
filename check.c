@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 20:00:30 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/24 09:00:35 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:03:45 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 //verificación de argumentos no repetidos. Sin terminar.
 
 
-bool repeat_digit(int argc, char *argv[])
+/* bool repeat_digit(int argc, char *argv[])
 {
     int i;
     int j;
@@ -40,7 +40,7 @@ bool repeat_digit(int argc, char *argv[])
         i++;
     }
     return true;
-}
+} */
 
 /* 
 primero comprobar que la cantidad de datos proporcionado sea mayor que dos, porque si es uno o menos no se va a poder comparar nada

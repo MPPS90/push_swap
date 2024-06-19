@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:47:49 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/25 00:27:23 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/06/12 19:10:20 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ bool repeat_digit(int argc, char *argv[]);
 char	*ft_join(char *s1, char *s2);
 int     add_check_nodo(t_numbers **numbs, t_numbers *new);
 char	*append(char *s1, char const *s2);
-void    check_nodes(t_numbers **stack, t_numbers **stack_b);
+void    check_3_nodes(t_numbers **stack, t_numbers **stack_b);
 int     is_ordered(t_numbers *stack);
+void    check_5_nodes(t_numbers **stack, t_numbers **stack_b);
 
 #endif
 
