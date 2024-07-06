@@ -98,9 +98,35 @@ void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
     
     if(result == 4)
     {
+        t_numbers   *min;
+        int count;
+
+        min = *stack;
+        count = 0;
+        while(min->next != NULL && min->numb > min->next->numb)
+        {
+            ft_printf("entra aqui\n");
+            ft_printf("%d\n", min->numb);
+            min = min->next;
+            count++;
+        }
+        ft_printf("que sale: %d\n", (*stack)->numb);
+        ft_printf("count: %d\n", count);
+        if(count == 1)
+            swap(stack, 0);
+        else if(count == 2)
+        {
+            rotate(stack, 0);
+            rotate(stack, 0);
+        }
+        else if(count == 3)
+            reverse_rotate(stack);
+        print_content(*stack);
         push_pb(stack, stack_b);
         check_3_nodes(stack, stack_b);
         push_pa(stack, stack_b);
+        //if((*stack)->numb > (*stack)->next->numb)
+
         //print_content(*stack);
     }
 
@@ -108,7 +134,7 @@ void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
     //quizas crear un contador que sume el numb (del pa) + 1 y lo busque en la lista o el numb(del pa) - 1 y lo busque
     //coger el valor del stack b y compararlo en stack_b->numb > stack->numb si es así siga recorriendo sino es así frena y allí va, ver q
     //movimientos hay que hacer.
-    if(result == 5)
+    /* if(result == 5)
     {
         //aux = stack;
         //aux_2 = stack_b;
@@ -119,5 +145,5 @@ void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
             return (0);
         
         print_content(*stack);
-    }
+    } */
 }
