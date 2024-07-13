@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-//falta una función para comprobar si está ordenado antes de entrar en esta función.
+//comprueba si antes de entrar en el algoritmo los número ya están ordenados
 
 int is_ordered(t_numbers *stack)
 {

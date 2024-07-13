@@ -16,6 +16,7 @@ SOURCE = main.c \
 		check.c \
 		join.c \
 		baile.c \
+		push_swap_utils.c \
 		
 
 OBJ = $(SOURCE:.c=.o)

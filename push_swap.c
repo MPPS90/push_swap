@@ -20,6 +20,7 @@ t_numbers	*create_node(int numb)
 	if(new_nodo == NULL)
 		return (NULL);
 	new_nodo->numb = numb;
+	new_nodo->index = -1;
 	new_nodo->next = NULL;
 	return (new_nodo);
 }

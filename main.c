@@ -90,6 +90,7 @@ int main(int argc, char*argv[])
     {
         ft_printf("entrasss aqui\n");
         check_3_nodes(&stack, &stack_b);
+        print_content(stack);
     }
     else if(result == 4)
     {

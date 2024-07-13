@@ -17,7 +17,8 @@ void print_content(t_numbers *numbs)
     ft_printf("==============\n");
     while(numbs !=NULL)
     {
-        ft_printf("%d\n", numbs->numb);
+        ft_printf("contenido: %d\n", numbs->numb);
+        ft_printf("Índice: %d\n", numbs->index);
         numbs = numbs->next;
     }
     ft_printf("==============\n");
