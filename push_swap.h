@@ -19,6 +19,7 @@
 typedef struct s_numbers
 {
     int numb;
+    int index;
     struct s_numbers *next;
 
 } t_numbers;

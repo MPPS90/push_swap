@@ -14,9 +14,11 @@
 
 void print_content(t_numbers *numbs)
 {
+    ft_printf("==============\n");
     while(numbs !=NULL)
     {
         ft_printf("%d\n", numbs->numb);
         numbs = numbs->next;
     }
+    ft_printf("==============\n");
 }

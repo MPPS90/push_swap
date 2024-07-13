@@ -52,7 +52,7 @@ void    check_3_nodes(t_numbers **stack, t_numbers **stack_b)
     second_numb = (*stack)->next->numb;
     third_numb = (*stack)->next->next->numb;
     //ft_printf("%d\n", result);
-    
+    (void)stack_b;
     if(result == 2)
     {
         if((*stack)->numb < (*stack)->next->numb)
@@ -88,29 +88,58 @@ void    check_3_nodes(t_numbers **stack, t_numbers **stack_b)
     }
 }
 
+/*
+ void	print_listas(t_list *header_a, t_list *header_b)
+{
+	printf("---------------------------------\n");
+	printf("Stack a		|		Stack b\n");
+	while (header_a || header_b)
+	{
+		if (header_a && header_b)
+		{
+			printf("%i		|		%i\n", *(int *)header_a->content,
+								*(int *)header_b->content);
+			header_a = header_a->next;
+			header_b = header_b->next;
+		}
+		else if (header_a)
+		{
+			printf("%i		|			\n", *(int *)header_a->content);
+			header_a = header_a->next;
+		}
+		else if (header_b)
+		{
+			printf("		|		%i\n", *(int *)header_b->content);
+			header_b = header_b->next;
+		}
+	}
+	printf("---------------------------------\n");
+} 
+*/
+
+
+
 void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
 {
-    int result;
-    //t_numbers   *aux;
-    //t_numbers   *aux_2;
+    int         result;
+    int         count;
+    t_numbers   *min;
+   
     
-    result = ft_lst_size(*stack);
-    
-    if(result == 4)
+    print_content(*stack);
+    while(is_ordered(*stack) == 0)
     {
-        t_numbers   *min;
-        int count;
-
         min = *stack;
         count = 0;
-        while(min->next != NULL && min->numb > min->next->numb)
+        while(min->next != NULL && min->numb > min->next->numb) 
+        //&& second_numb > third_numb && third_numb > fourth_numb)
         {
             ft_printf("entra aqui\n");
             ft_printf("%d\n", min->numb);
             min = min->next;
             count++;
         }
-        ft_printf("que sale: %d\n", (*stack)->numb);
+        // ft_printf("que sale: %d\n", (*stack)->numb);
         ft_printf("count: %d\n", count);
         if(count == 1)
             swap(stack, 0);
@@ -120,30 +149,25 @@ void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
             rotate(stack, 0);
         }
         else if(count == 3)
-            reverse_rotate(stack);
+        {
+            reverse_rotate(stack); 
+            push_pb(stack, stack_b);
+        }
         print_content(*stack);
-        push_pb(stack, stack_b);
-        check_3_nodes(stack, stack_b);
-        push_pa(stack, stack_b);
-        //if((*stack)->numb > (*stack)->next->numb)
-
-        //print_content(*stack);
+        result = ft_lst_size(*stack);
+        if (result == 3)
+        {
+            check_3_nodes(stack, stack_b);
+            push_pa(stack, stack_b);
+        }
+        sleep(1);
+        print_content(*stack);
     }
 
-    //este da  mal porque no esta organizando despues de hacer el pa, ver como hago con eso
-    //quizas crear un contador que sume el numb (del pa) + 1 y lo busque en la lista o el numb(del pa) - 1 y lo busque
-    //coger el valor del stack b y compararlo en stack_b->numb > stack->numb si es así siga recorriendo sino es así frena y allí va, ver q
-    //movimientos hay que hacer.
-    /* if(result == 5)
-    {
-        //aux = stack;
-        //aux_2 = stack_b;
-        push_pb(stack, stack_b);
-        check_3_nodes(stack, stack_b);
-        push_pa(stack, stack_b);
-        if(is_ordered(stack) == 1)
-            return (0);
-        
-        print_content(*stack);
-    } */
 }
+
+//PENDIENTES
+//1. Que cuando se creen los nodos tengan indice. Todos deberían entrar a la lista con el mismo indice, cuando ya no entren más 
+//ir comparándolos y dandole indice en orden según sea más pequeño (ver foto)
+//2. Con el lt_size ver el total de nodos de la lista, si el que estoy buscando (más pequeño está de la primera mitad poner unos movimientos y si está en la otra mitad otros), esto es para 
+//hacer que el más pequeño pase arriba y poder pushearlo al stack_b. Es diferente a lo de organizarlos cuando tenga 3 nodos. 
