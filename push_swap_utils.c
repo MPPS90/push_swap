@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpena-so <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 22:41:38 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/07/13 22:41:48 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/07/17 21:12:30 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+/* #include "push_swap.h"
 
 void change_index (t_numbers **stack, int index)
 {
@@ -27,4 +27,4 @@ void change_index (t_numbers **stack, int index)
         }
         aux = aux->next;
     }
-}
+} */

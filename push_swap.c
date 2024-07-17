@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:59:20 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/05/30 18:17:51 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/07/17 21:13:50 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_numbers	*create_node(int numb)
 	if(new_nodo == NULL)
 		return (NULL);
 	new_nodo->numb = numb;
-	new_nodo->index = -1;
+	//new_nodo->index = -1;
 	new_nodo->next = NULL;
 	return (new_nodo);
 }

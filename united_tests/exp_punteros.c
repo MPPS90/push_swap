@@ -87,3 +87,36 @@ int main() {
 
 //EN  ESTE ULTIMO SE PUEDE VER QUE CUANDO ES UN * EL PUNTERO SEÑALA DIRECTAMENTE AL MAIN, PERO CUANDO ES ** EL PRIMER PUNTERO APUNTA A UN PUNTERO (SEGUNDO PUNTERO) Y
 //EL SEGUNDO PUNTERO APUNTA A MAIN. EN ESTE CASO EL ** NO ES UNA COPIA PORQUE PUEDE MODIFICAR AL MAIN. 
+
+
+
+//OTRA COSA (NO ES PUNTEROS)
+
+/*
+ void	print_listas(t_list *header_a, t_list *header_b)
+{
+	printf("---------------------------------\n");
+	printf("Stack a		|		Stack b\n");
+	while (header_a || header_b)
+	{
+		if (header_a && header_b)
+		{
+			printf("%i		|		%i\n", *(int *)header_a->content,
+								*(int *)header_b->content);
+			header_a = header_a->next;
+			header_b = header_b->next;
+		}
+		else if (header_a)
+		{
+			printf("%i		|			\n", *(int *)header_a->content);
+			header_a = header_a->next;
+		}
+		else if (header_b)
+		{
+			printf("		|		%i\n", *(int *)header_b->content);
+			header_b = header_b->next;
+		}
+	}
+	printf("---------------------------------\n");
+} 
+*/

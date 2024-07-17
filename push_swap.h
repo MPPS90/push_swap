@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:47:49 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/06/12 19:10:20 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/07/17 21:13:26 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 typedef struct s_numbers
 {
     int numb;
-    int index;
+    //int index;
     struct s_numbers *next;
 
 } t_numbers;
