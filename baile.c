@@ -98,37 +98,41 @@ void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
     min = *stack;
     count = 0;
     //print_content(*stack);
-    while(min->next != NULL && min->numb > min->next->numb) 
+    if (is_ordered(stack) == 0)
     {
-        ft_printf("entra aqui\n");
-        ft_printf("%d\n", min->numb);
-        min = min->next;
-        count++;
+        while(min->next != NULL && min->numb > min->next->numb) 
+        {
+            ft_printf("entra aqui\n");
+            ft_printf("%d\n", min->numb);
+            min = min->next;
+            count++;
+        }
+            // ft_printf("que sale: %d\n", (*stack)->numb);
+        ft_printf("count: %d\n", count);
+        if(count == 1)
+            swap(stack, 0);
+        else if(count == 2)
+        {
+            rotate(stack, 0);
+            rotate(stack, 0);
+            push_pb(stack, stack_b);
+        }
+        else if(count == 3)
+        {
+            reverse_rotate(stack); 
+            push_pb(stack, stack_b);
+        }
+        print_content(*stack);
+        print_content(*stack_b);
+        result = ft_lst_size(*stack);
+        if (result == 3)
+        {
+            check_3_nodes(stack, stack_b);
+            push_pa(stack, stack_b);
+        }
+        sleep(1);
     }
-        // ft_printf("que sale: %d\n", (*stack)->numb);
-    ft_printf("count: %d\n", count);
-    if(count == 1)
-        swap(stack, 0);
-    else if(count == 2)
-    {
-        rotate(stack, 0);
-        rotate(stack, 0);
-        push_pb(stack, stack_b);
-    }
-    else if(count == 3)
-    {
-        reverse_rotate(stack); 
-        push_pb(stack, stack_b);
-    }
-    print_content(*stack);
-    print_content(*stack_b);
-    result = ft_lst_size(*stack);
-    if (result == 3)
-    {
-        check_3_nodes(stack, stack_b);
-        push_pa(stack, stack_b);
-    }
-    sleep(1);
+
     //print_content(*stack);
 }
 
