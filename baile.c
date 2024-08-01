@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:35:39 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/07/17 21:48:28 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/07/17 22:04:09 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,3 +188,6 @@ void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
     }
 
 } */
+
+
+//función que guarde la posición del mas pequeño 
