@@ -14,14 +14,17 @@
 
 //comprueba si antes de entrar en el algoritmo los número ya están ordenados
 
-int is_ordered(t_numbers *stack)
+int is_ordered(t_numbers **stack)
 {
     t_numbers   *aux;
 
-    aux = stack;
+    aux = *stack;
 
+    print_content(*stack);
+    printf("\n");
     while(aux->next != NULL)
     {
+        printf("numero 1: %d y numero 2: %d\n", aux->numb, aux->next->numb);
         if(aux->numb > aux->next->numb)
             return(0);
         aux = aux->next;
@@ -88,29 +91,74 @@ void    check_3_nodes(t_numbers **stack, t_numbers **stack_b)
     }
 }
 
+/*int find_min(t_numbers **stack)
+{
+    t_numbers   *aux;
+    int         min;
 
-void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
+    aux = *stack;
+    min = aux->numb;
+    while(aux != NULL)
+    {   
+        if (aux->numb < min)
+            min = aux->numb;
+        aux = aux->next;
+    }
+    return min;
+}*/
+
+void find_min(t_numbers **stack)
+{
+    t_numbers   *aux;
+
+    aux = *stack;
+    (*stack)->min = aux->numb;
+    while(aux != NULL)
+    {   
+        if (aux->numb < (*stack)->min)
+            (*stack)->min = aux->numb;
+        aux = aux->next;
+    }
+}
+
+
+void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
 {
     int         result;
     int         count;
-    t_numbers   *min;
+    t_numbers   *aux;
+    //int         min;
    
-    min = *stack;
-    count = 0;
-    //print_content(*stack);
+    count = -1;
+   //min = 0;
+
+    // print_content(*stack);
+    // printf("\n");
     if (is_ordered(stack) == 0)
     {
-        while(min->next != NULL && min->numb > min->next->numb) 
+        find_min(stack);
+        aux = *stack;
+        // while(aux->min != aux->numb && aux != NULL) 
+        // {
+        //     //ft_printf("entra aqui\n");
+        //     ft_printf("%d\n", aux->min);
+        //     count++;
+        //     aux = aux->next;
+        // }
+        while (aux != NULL)
         {
-            ft_printf("entra aqui\n");
-            ft_printf("%d\n", min->numb);
-            min = min->next;
-            count++;
+            if (aux->numb != aux->min)
+                count++;
+            aux = aux->next;
         }
-            // ft_printf("que sale: %d\n", (*stack)->numb);
-        ft_printf("count: %d\n", count);
+        printf("COunt %d\n", count);
+        // ft_printf("que sale: %d\n", (*stack)->numb);
+        //ft_printf("count: %d\n", count);
         if(count == 1)
+        {
             swap(stack, 0);
+            push_pb(stack, stack_b);
+        }
         else if(count == 2)
         {
             rotate(stack, 0);
@@ -122,15 +170,15 @@ void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
             reverse_rotate(stack); 
             push_pb(stack, stack_b);
         }
-        print_content(*stack);
-        print_content(*stack_b);
+        // print_content(*stack);
+        // print_content(*stack_b);
         result = ft_lst_size(*stack);
         if (result == 3)
         {
             check_3_nodes(stack, stack_b);
             push_pa(stack, stack_b);
         }
-        sleep(1);
+        //sleep(1);
     }
 
     //print_content(*stack);

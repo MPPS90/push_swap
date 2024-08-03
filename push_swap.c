@@ -20,12 +20,13 @@ t_numbers	*create_node(int numb)
 	if(new_nodo == NULL)
 		return (NULL);
 	new_nodo->numb = numb;
+	//new_nodo->min = 0;
 	//new_nodo->index = -1;
 	new_nodo->next = NULL;
 	return (new_nodo);
 }
 
-void	add_nodo(t_numbers **stack, t_numbers *new)
+/*void	add_nodo(t_numbers **stack, t_numbers *new)
 {
 	t_numbers	*aux;
 	
@@ -44,7 +45,7 @@ void	add_nodo(t_numbers **stack, t_numbers *new)
 		}
 		aux->next = new;
 	}
-}
+}*/
 
 int	add_check_nodo(t_numbers **stack, t_numbers *new)
 {
@@ -62,12 +63,14 @@ int	add_check_nodo(t_numbers **stack, t_numbers *new)
 	{
 		//ft_printf("prueba\n");
 		aux = *stack;
-		while(aux != NULL)
+		while (aux != NULL)
 		{
+			//printf("Esta checkeando la posicion: %d y new_num es %d\n", aux->numb, new->numb);
 			//ft_printf("prueba\n");
-			if(aux->numb == new->numb)
+			if (aux->numb == new->numb)
 			{
 				free(new);
+				//free_stack(*stack);
 				ft_printf("Error\n");
 				return(1);
 			}
@@ -76,5 +79,6 @@ int	add_check_nodo(t_numbers **stack, t_numbers *new)
 		}
 		prev->next = new;
 	}
+	//free(new);
 	return (0);
 }

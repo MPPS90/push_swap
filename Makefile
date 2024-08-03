@@ -26,7 +26,7 @@ LIBFT = libft/libft.a
 
 all: $(LIBFT) $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) push_swap.h
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L$(LIBFT_DIR) -lft
 
 $(LIBFT):

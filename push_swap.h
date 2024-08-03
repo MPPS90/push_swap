@@ -19,7 +19,7 @@
 typedef struct s_numbers
 {
     int numb;
-    //int index;
+    int min;
     struct s_numbers *next;
 
 } t_numbers;
@@ -35,13 +35,18 @@ void    push_pb(t_numbers **stack_a, t_numbers **stack_b);
 void    rotate(t_numbers **stack, int i);
 void    rotate_rr(t_numbers **stack_a, t_numbers **stack_b);
 void    reverse_rotate(t_numbers **stack);
-bool repeat_digit(int argc, char *argv[]);
+bool    repeat_digit(int argc, char *argv[]);
 char	*ft_join(char *s1, char *s2);
 int     add_check_nodo(t_numbers **numbs, t_numbers *new);
 char	*append(char *s1, char const *s2);
 void    check_3_nodes(t_numbers **stack, t_numbers **stack_b);
-int     is_ordered(t_numbers *stack);
-void    check_5_nodes(t_numbers **stack, t_numbers **stack_b);
+int     is_ordered(t_numbers **stack);
+void    check_4_nodes(t_numbers **stack, t_numbers **stack_b);
+//int     find_min(t_numbers **stack);
+
+void    find_min(t_numbers **stack);
+void    free_stack(t_numbers *stack);
+void    free_double(char **str);
 
 #endif
 

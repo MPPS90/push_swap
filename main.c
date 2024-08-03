@@ -18,6 +18,30 @@ int check_digit(char *str)
     return 0;
 }
 
+void free_stack(t_numbers *stack)
+{
+    t_numbers *aux;
+
+    while (stack != NULL)
+    {
+        aux = stack;
+        stack = stack->next;
+        free(aux);
+    }
+}
+
+void    free_double(char **str)
+{
+    int i;
+
+    i = 0;
+    while (str[i] != NULL)
+    {
+        free(str[i]);
+        i++;
+    }
+    free(str);
+}
 
 int main(int argc, char*argv[])
 {
@@ -28,9 +52,11 @@ int main(int argc, char*argv[])
     t_numbers   *new_node;
     t_numbers   *stack_b;
     int result;
+    //int min;
 
     stack = NULL;
     stack_b = NULL;
+    //min = 0;
  
     i = 1;
     if(argc <= 2)
@@ -41,31 +67,33 @@ int main(int argc, char*argv[])
         j = 0;
         while(sub_s[j])
         {
-            if(check_digit(sub_s[j]) == 1)
+            if (check_digit(sub_s[j]) == 1)
             {
-                free(sub_s[j]);
-                free(sub_s);
+                free_double(sub_s);
                 ft_printf("Error\n");
-                return (1);
+                //return (1);
+                exit(1);
             }
             if(ft_atol(sub_s[j])> 2147483647 || ft_atol(sub_s[j]) < -2147483648)
             {
-                free(sub_s[j]);
-                free(sub_s);
+                //free(sub_s[j]);
+                free_double(sub_s);
                 ft_printf("Error\n");
+                exit(1);
             }
             //free(sub_s[j]);
             new_node = create_node(ft_atol(sub_s[j]));
             //ft_printf("contenido new_nodo %d\n", new_node->numb);
-            if(new_node == NULL)
+            if (new_node == NULL)
             {
-                free(sub_s[j]);
-                free(sub_s);
+                //free(sub_s[j]);
+                free_double(sub_s);
+                free_stack(stack);
                 ft_printf("Error\n");
                 exit(1);
             }
             //ft_printf("antes de comprobar contenido nodo\n");
-            if(add_check_nodo(&stack, new_node) == 1)
+            if (add_check_nodo(&stack, new_node) == 1)
                 exit(1);
             //print_content(stack);
             //printf("------\n");
@@ -77,8 +105,13 @@ int main(int argc, char*argv[])
         free(sub_s);
         i++;
     }
+    /*sprintf("La cabeza de la lista es %d\n La lista es: \n", stack->numb);
+    print_content(stack);*/
+    //printf("\n");
     result = ft_lst_size(stack);
-    if(is_ordered(stack) == 1)
+    // print_content(stack);
+    // printf("\n");
+    if (is_ordered(&stack) == 1)
     {
         ft_printf("esta ordenadoooooo\n");
         exit(1);
@@ -88,15 +121,23 @@ int main(int argc, char*argv[])
     print_content(stack); */
     else if(result == 3)
     {
-        ft_printf("entrasss aqui\n");
+        ft_printf("entrasss aquiiii\n");
         check_3_nodes(&stack, &stack_b);
         print_content(stack);
     }
+    //ft_printf("entrasss por aqui\n");
+    //print_content(stack);
+    //min = find_min(&stack);
+    /* find_min(&stack);
+    ft_printf("min: %d\n", stack->min); */
     else if(result == 4)
     {
-        check_5_nodes(&stack, &stack_b);
+        check_4_nodes(&stack, &stack_b);
         print_content(stack);
     }
+    free_stack(stack);
+    //free_stack(stack_b);
+    //free(new_node);
     return 0;
 }
 
