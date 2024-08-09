@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 22:41:38 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/08/09 20:56:57 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/08/09 21:18:13 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,10 @@ void find_max(t_numbers **stack)
             if(first_node->numb > node->numb)
             {
                 count++;
-                node = node->numb
+                node = node->next;
             }
             first_node->max = count;
             first_node = first_node->next;
         }
     }
-    
-    
-
-    
 }
