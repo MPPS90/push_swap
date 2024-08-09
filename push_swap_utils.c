@@ -6,25 +6,37 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 22:41:38 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/07/17 21:12:30 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/08/09 20:56:57 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "push_swap.h"
+#include "push_swap.h"
 
-void change_index (t_numbers **stack, int index)
+void find_max(t_numbers **stack)
 {
-    t_numbers   *aux;
-    int         min;
-
-    aux = stack;
-    while(aux->next != NULL)
+    t_numbers  *first_node;
+    t_numbers  *node;
+    int     count;
+    
+    first_node = *stack;
+    while(first_node != NULL)
     {
-        if(aux->numb > aux->next->numb)
+        node = *stack;
+        count = 0;
+        
+        while(node != NULL)
         {
-            min = aux->next->numb;
-            aux->index = 0;
+            if(first_node->numb > node->numb)
+            {
+                count++;
+                node = node->numb
+            }
+            first_node->max = count;
+            first_node = first_node->next;
         }
-        aux = aux->next;
     }
-} */
+    
+    
+
+    
+}

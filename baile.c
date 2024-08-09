@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:35:39 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/07/17 22:04:09 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/08/09 18:33:49 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ void    check_3_nodes(t_numbers **stack, t_numbers **stack_b)
     {
         if((*stack)->numb < (*stack)->next->numb)
             swap(stack, 0);
-            //ojo que aqui he puesto solo para el stack a
     }
     if(result == 3)
     {
@@ -69,24 +68,20 @@ void    check_3_nodes(t_numbers **stack, t_numbers **stack_b)
         else if((first_numb > second_numb) && (second_numb < third_numb) && (third_numb < first_numb))
         {
             rotate(stack, 0);
-            //ojo que aquí he puesto solo para el stack a
         }    
         else if((first_numb > second_numb) && (second_numb > third_numb) && (third_numb < first_numb))
         {
             swap(stack, 0);
             reverse_rotate(stack);
-            //ojo que aquí he puesto solo para el stack a
         }
         else if((first_numb > second_numb) && (second_numb < third_numb) && (third_numb > first_numb))
         {
             swap(stack, 0);
-            //ojo que aquí he puesto solo para el stack a
         }   
         else if((first_numb < second_numb) && (second_numb > third_numb) && (third_numb > first_numb))
         {
             swap(stack, 0);
             rotate(stack, 0);
-            //ojo que aquí he puesto solo para el stack
         }
     }
 }
@@ -151,7 +146,7 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
                 count++;
             aux = aux->next;
         }
-        printf("COunt %d\n", count);
+        printf("Count %d\n", count);
         // ft_printf("que sale: %d\n", (*stack)->numb);
         //ft_printf("count: %d\n", count);
         if(count == 1)
