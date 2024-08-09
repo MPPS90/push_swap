@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:35:39 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/08/09 18:33:49 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/08/09 22:14:54 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,6 @@ void find_min(t_numbers **stack)
         aux = aux->next;
     }
 }
-
 
 void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
 {

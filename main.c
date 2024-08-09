@@ -111,7 +111,10 @@ int main(int argc, char*argv[])
     result = ft_lst_size(stack);
     // print_content(stack);
     // printf("\n");
-    if (is_ordered(&stack) == 1)
+    ft_printf("POR POR\n");
+    //find_max(&stack);
+    ft_printf("POR AQUÍ\n");
+    if(is_ordered(&stack) == 1)
     {
         ft_printf("esta ordenadoooooo\n");
         exit(1);
