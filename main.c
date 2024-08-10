@@ -135,6 +135,7 @@ int main(int argc, char*argv[])
     ft_printf("min: %d\n", stack->min); */
     else if(result == 4)
     {
+        //ft_printf("entrasss aquiiii jejeje\n");
         check_4_nodes(&stack, &stack_b);
         print_content(stack);
     }

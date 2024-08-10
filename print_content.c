@@ -23,3 +23,16 @@ void print_content(t_numbers *numbs)
     }
     ft_printf("==============\n");
 }
+
+/* void print_content_min(t_numbers *numbs)
+{
+    ft_printf("==============\n");
+    while(numbs !=NULL)
+    {
+        ft_printf("los minimos son: ");
+        ft_printf("%d\n", numbs->min);
+        //ft_printf("Índice: %d\n", numbs->index);
+        numbs = numbs->next;
+    }
+    ft_printf("==============\n");
+} */

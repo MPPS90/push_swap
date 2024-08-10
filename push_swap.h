@@ -49,6 +49,7 @@ void    find_min(t_numbers **stack);
 void    free_stack(t_numbers *stack);
 void    free_double(char **str);
 void    find_max(t_numbers **stack);
+//void    print_content_min(t_numbers *numbs);
 
 #endif
 

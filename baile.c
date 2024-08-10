@@ -24,7 +24,7 @@ int is_ordered(t_numbers **stack)
     printf("\n");
     while(aux->next != NULL)
     {
-        printf("numero 1: %d y numero 2: %d\n", aux->numb, aux->next->numb);
+        //printf("numero 1: %d y numero 2: %d\n", aux->numb, aux->next->numb);
         if(aux->numb > aux->next->numb)
             return(0);
         aux = aux->next;
@@ -131,7 +131,11 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
     if (is_ordered(stack) == 0)
     {
         find_min(stack);
+        
         aux = *stack;
+        ft_printf("EL CONTENIDO DE AUX es");
+        print_content(aux);
+        //print_content_min(aux);
         // while(aux->min != aux->numb && aux != NULL) 
         // {
         //     //ft_printf("entra aqui\n");
@@ -141,13 +145,32 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
         // }
         while (aux != NULL)
         {
-            if (aux->numb != aux->min)
+            ft_printf("MIRA AQUII\n");
+            ft_printf("aux->numb: %d\n", aux->numb);
+            ft_printf("aux->min: %d\n", (*stack)->min);
+            if (aux->numb == (*stack)->min)
+            {
+                //ft_printf("entra aquí?????");
+                ft_printf("Count antes: %d\n", count);
                 count++;
+                ft_printf("Count despues: %d\n", count);
+                return ;
+            }
             aux = aux->next;
         }
         printf("Count %d\n", count);
+        ft_printf("el minimo ahora es je: %d\n", (*stack)->min);
+        ft_printf("el minimo DE AUX ahora es je: %d\n", (*stack)->min);
+        ft_printf("ahora el contenido de STACK es");
+        print_content(*stack);
+        ft_printf("ahora el contenido de AUX es");
+        print_content(aux);
         // ft_printf("que sale: %d\n", (*stack)->numb);
         //ft_printf("count: %d\n", count);
+        if(count == 0)
+        {
+            push_pb(stack, stack_b);
+        }
         if(count == 1)
         {
             swap(stack, 0);
@@ -155,11 +178,16 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
         }
         else if(count == 2)
         {
+            swap(stack, 0);
+            push_pb(stack, stack_b);
+        }
+        else if(count == 3)
+        {
             rotate(stack, 0);
             rotate(stack, 0);
             push_pb(stack, stack_b);
         }
-        else if(count == 3)
+        else if(count == 4)
         {
             reverse_rotate(stack); 
             push_pb(stack, stack_b);
@@ -167,9 +195,18 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
         // print_content(*stack);
         // print_content(*stack_b);
         result = ft_lst_size(*stack);
+        ft_printf("stack a:\n");
+        print_content(*stack);
+        ft_printf("stack b:\n");
+        print_content(*stack_b);
+        
         if (result == 3)
         {
+            ft_printf("stack a despues:\n");
             check_3_nodes(stack, stack_b);
+            print_content(*stack);
+            ft_printf("stack b despues:\n");
+            print_content(*stack_b);
             push_pa(stack, stack_b);
         }
         //sleep(1);
