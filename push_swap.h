@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:47:49 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/08/09 21:57:45 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/08/11 16:45:41 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int     is_ordered(t_numbers **stack);
 void    check_4_nodes(t_numbers **stack, t_numbers **stack_b);
 //int     find_min(t_numbers **stack);
 
-void    find_min(t_numbers **stack);
+int    find_min(t_numbers **stack);
 void    free_stack(t_numbers *stack);
 void    free_double(char **str);
 void    find_max(t_numbers **stack);

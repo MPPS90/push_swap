@@ -6,7 +6,7 @@
 /*   By: mpena-so <mpena-so@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:35:39 by mpena-so          #+#    #+#             */
-/*   Updated: 2024/08/09 22:14:54 by mpena-so         ###   ########.fr       */
+/*   Updated: 2024/08/12 01:15:33 by mpena-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,8 @@ void    check_3_nodes(t_numbers **stack, t_numbers **stack_b)
     return min;
 }*/
 
-void find_min(t_numbers **stack)
+//en este encontraba el menor, pero no la posición sino solo el número menor
+/* void find_min(t_numbers **stack)
 {
     t_numbers   *aux;
 
@@ -114,9 +115,54 @@ void find_min(t_numbers **stack)
             (*stack)->min = aux->numb;
         aux = aux->next;
     }
+} */
+
+/* 
+En este la función encuentra la POSICIÓN del menor número en la lista stack
+La posición empieza desde 0
+
+Ej:
+lista = [-4 2 0 -200]
+pos = [0 1 2 3]
+En este caso al ser -200 el menor número de la lista, la función devolvería 3
+ */
+
+int find_min(t_numbers *stack)
+{
+    int min_pos;
+    int current_pos;
+    int min_value;
+
+    int min_pos = 0;
+    int current_pos = 0;
+    int min_value = stack->numb;
+
+    while(stack != NULL)
+    {
+        if(stack->numb < min_value)
+        {
+            min_value = stack->numb;
+            min_pos = current_pos;
+        }
+        stack = stack->next;
+        current_pos++;
+    }
+    return (min_pos);
 }
 
+//PENDIENTE ACABAR IMAGEN FABRI
 void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
+{
+    int count;
+    int size;
+}
+
+
+
+
+
+//este era el que tenía antes de que Fabri me ayudará a que funcionara bien
+/* void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
 {
     int         result;
     int         count;
@@ -213,7 +259,14 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
     }
 
     //print_content(*stack);
-}
+} */
+
+
+
+
+
+
+
 
 //PENDIENTES
 //1. Que cuando se creen los nodos tengan indice. Todos deberían entrar a la lista con el mismo indice, cuando ya no entren más 
