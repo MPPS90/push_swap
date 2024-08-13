@@ -127,15 +127,15 @@ pos = [0 1 2 3]
 En este caso al ser -200 el menor número de la lista, la función devolvería 3
  */
 
-int find_min(t_numbers *stack)
+int find_min_pos(t_numbers *stack)
 {
     int min_pos;
     int current_pos;
     int min_value;
 
-    int min_pos = 0;
-    int current_pos = 0;
-    int min_value = stack->numb;
+    min_pos = 0;
+    current_pos = 0;
+    min_value = stack->numb;
 
     while(stack != NULL)
     {
@@ -150,16 +150,83 @@ int find_min(t_numbers *stack)
     return (min_pos);
 }
 
-//PENDIENTE ACABAR IMAGEN FABRI
+int find_position(t_numbers *stack)
+{
+    int size;
+    int min_pos;
+
+    min_pos = find_min_pos(stack);
+    size = ft_lst_size(stack);
+    ft_printf("el tamaño de la lista es:  %d\n", size);
+    //ft_printf("el resto de la lista es: %d\n", resto);
+    if(size % 2 == 0)
+    {
+
+        
+    }
+    else
+
+
+
+    return(size);
+
+}
+
+
+void check_4_nodes(t_numbers **stack, t_numbers **stack_b)
+{
+    int min_pos;
+    int pos;
+
+    (void)stack_b;
+
+    min_pos = find_min_pos(*stack);
+    ft_printf("el núm menor de la lista esta en la posición:  %d\n", min_pos);
+    pos = find_position(*stack) + 1;
+    ft_printf("el menor es el número PENDIENT DE VER TODAVIA:  %d\n", pos);
+}
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------
+//AQUI FUNCIONA PERO NO ES EFICIENTE
+//CON ESTE FUNCIONA DE 4 O MÁS PERO HACE MUCHOS MOVIMIENTOS
 void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
 {
     int count;
     int size;
-}
+
+    (void) stack_b;
+//mientras que la lista no este ordenada
+    while(!is_ordered(stack))
+    {
+        //se halla la posición mínima de lo que tiene en la lista en ese momento
+        count = find_min(*stack);
+        ft_printf("la posición del mínimo es:  %d\n", count);
+
+        while(count--)
+        {
+            //ft_printf("entra aquí\n");
+            rotate(stack, 0);
+            //print_content(*stack);
+
+        }
+        //cuando ya se ha movido el menor número (count) del stack se hace push b
+        push_pb(stack, stack_b);
+    }
+    size = ft_lst_size(*stack_b);
+    ft_printf("en el stack_b hay:  %d elementos\n",size);
+//el size me indica cuantos elementos debo pushear de B a A por tanto cuantas veces size se deberá disminuir
+    while(size--)
+    {
+        push_pa(stack, stack_b);
+        //print_content(*stack);
+    }
+} */
 
 
 
-
+//------------------------------------------------------------------------
 
 //este era el que tenía antes de que Fabri me ayudará a que funcionara bien
 /* void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
@@ -267,15 +334,7 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
 
 
 
-
-//PENDIENTES
-//1. Que cuando se creen los nodos tengan indice. Todos deberían entrar a la lista con el mismo indice, cuando ya no entren más 
-//ir comparándolos y dandole indice en orden según sea más pequeño (ver foto)
-//2. Con el lt_size ver el total de nodos de la lista, si el que estoy buscando (más pequeño está de la primera mitad poner unos movimientos y si está en la otra mitad otros), esto es para 
-//hacer que el más pequeño pase arriba y poder pushearlo al stack_b. Es diferente a lo de organizarlos cuando tenga 3 nodos. 
-
-
-
+//-------------------------------------------------------------------------
 //lo que cambie con Fabri
 
 /* void    check_5_nodes(t_numbers **stack, t_numbers **stack_b)
@@ -326,4 +385,3 @@ void    check_4_nodes(t_numbers **stack, t_numbers **stack_b)
 } */
 
 
-//función que guarde la posición del mas pequeño 

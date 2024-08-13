@@ -111,9 +111,9 @@ int main(int argc, char*argv[])
     result = ft_lst_size(stack);
     // print_content(stack);
     // printf("\n");
-    ft_printf("POR POR\n");
+    //ft_printf("POR POR\n");
     //find_max(&stack);
-    ft_printf("POR AQUÍ\n");
+    //ft_printf("POR AQUÍ\n");
     if(is_ordered(&stack) == 1)
     {
         ft_printf("esta ordenadoooooo\n");
@@ -124,7 +124,7 @@ int main(int argc, char*argv[])
     print_content(stack); */
     else if(result == 3)
     {
-        ft_printf("entrasss aquiiii\n");
+        //ft_printf("entrasss aquiiii\n");
         check_3_nodes(&stack, &stack_b);
         print_content(stack);
     }
@@ -133,7 +133,8 @@ int main(int argc, char*argv[])
     //min = find_min(&stack);
     /* find_min(&stack);
     ft_printf("min: %d\n", stack->min); */
-    else if(result == 4)
+    else 
+    //if(result == 4)
     {
         //ft_printf("entrasss aquiiii jejeje\n");
         check_4_nodes(&stack, &stack_b);

@@ -45,10 +45,11 @@ int     is_ordered(t_numbers **stack);
 void    check_4_nodes(t_numbers **stack, t_numbers **stack_b);
 //int     find_min(t_numbers **stack);
 
-int    find_min(t_numbers **stack);
+int     find_min_pos(t_numbers *stack);
 void    free_stack(t_numbers *stack);
 void    free_double(char **str);
 void    find_max(t_numbers **stack);
+int     find_position(t_numbers *stack);
 //void    print_content_min(t_numbers *numbs);
 
 #endif
