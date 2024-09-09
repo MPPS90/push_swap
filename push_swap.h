@@ -20,6 +20,7 @@ typedef struct s_numbers
 {
     int numb;
     int min;
+    //int index; //Del mas guapo de los guapos osea Sebaastian el mejor , the best in the world 
     int max;
     struct s_numbers *next;
 

@@ -26,6 +26,7 @@ t_numbers	*create_node(int numb)
 	return (new_nodo);
 }
 
+
 /*void	add_nodo(t_numbers **stack, t_numbers *new)
 {
 	t_numbers	*aux;
@@ -82,3 +83,31 @@ int	add_check_nodo(t_numbers **stack, t_numbers *new)
 	//free(new);
 	return (0);
 }
+
+
+//SEBASTIAN 
+/* void  index_num(t_list **top)
+{
+	t_list *tmp1;
+	t_list *tmp2;
+
+	tmp1 = (*top);
+	while (tmp1)
+	{
+		tmp2 = tmp1->next;
+		while(tmp2)
+		{
+			if (tmp1->content > tmp2->content)
+				tmp1->index++;
+			else
+				tmp2->index++;
+			tmp2 = tmp2->next;	
+		}
+		tmp1 = tmp1->next;
+	}
+	
+} */
+
+
+
+
